@@ -1,0 +1,64 @@
+
+html, body {
+    background-color: rgba(27, 175, 52, 0.464);
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;   
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+h1{
+    color:darkorange;
+    font-weight: 300; 
+    text-align: center;  
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto 1fr; }
+
+    .brand {
+        grid-column: 1 / span 2;
+        grid-row: 1; 
+        background-color: rgba(27, 175, 52, 0.464);
+        
+}
+         
+        .page-links {
+        grid-column: 3 / span 2;
+        grid-row: 1;
+        text-align: right;
+        background-color: rgba(27, 175, 52, 0.464);
+}
+        
+        .main {
+            grid-column: 1 / -1;
+            grid-row: 2;
+            width: 75vw;
+            margin: 0 auto;
+            text-align: center; /* Horizontally center the content */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Vertically center the content */
+            align-items: center;
+            }
+            .menu-button {
+                font-size: 20px;
+                color: white;
+                background-color: #379EA8;
+                padding: 2px 20px;
+                border-style: solid;
+                border-radius: 5px;
+                border-color: white; 
+            }
+            .home_splash{
+                width: 100%;
+                height:auto;
+            }
+            figcaption{
+                color: white;
+                font-weight: 100;
+                
+            }
