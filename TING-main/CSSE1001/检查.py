@@ -1,40 +1,23 @@
-def get_player_move():
+def play_game(self)->None:
     while True:
-        try:
-            move = input('Enter your move: ')
-            move_assemblies = move.split()
+        if self.model.has_won():
+            self.display()
+            print("You won!")
+            return
 
-            if len(move_assemblies) == 1 and move_assemblies[0].upper() == 'H':
-                print('HELP_MESSAGE')
-                continue
+        if self.model.has_lost():
+            print("Detected loss condition")
+            print("You lost!")
+            break  # explicitly break out of the loop
 
-            if len(move_assemblies) != 3 or \
-               not move_assemblies[0].isdigit() or \
-               not move_assemblies[1].isdigit() or \
-               not move_assemblies[2].isdigit():
-                print('Invalid move format. Please try again.')
-                continue
+        self.display()
+        move = input("Enter move: ")
 
-            row = int(move_assemblies[0]) - 1
-            col = int(move_assemblies[1]) - 1
-
-            if not (0 <= row < 3 and 0 <= col < 3):
-                print('Invalid row. Please try again.')
-                continue
-
-            pieces = int(move_assemblies[2])
-
-            if not (1 <= pieces <= PIECES_PER_PLAYER):
-                print('Invalid piece size. Please try again.')
-                continue
-
-            return (row, col, pieces)
-
-        except ValueError:
-            # Handle non-integer inputs
-            print('Invalid input. Please enter a valid move.')
-            continue
-               
-        
-        
-    
+        if move == 'q':
+            print("Exiting on user request")
+            break
+        elif move == 'u':
+            self.model.undo()
+        else: 
+            if not self.model.attempt_move(move):
+                print('Invalid move\n')

@@ -1,0 +1,1 @@
+score += scores.get(c,0)   ignore, 后面是(c,0)
