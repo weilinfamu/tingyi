@@ -34,6 +34,10 @@
     grid-column-end:4;
     grid-row-start:5;
     grid-row-end:7;
+    background-color: white;
+    width:75%
+    border-radius: 10px;
+    margin-top:5%;
 }
 
 #about-item-4{
@@ -53,5 +57,36 @@
     height: 100%;
     object-fit: cover;
 
+}
+
+#subscribe-form {
+    width:90%
+    padding:5%;
+}
+#subscribe-form > label {
+    display: block;
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+}
+
+#subscribe-form > input {
+    display: block;
+    width: 80%;
+    margin-bottom: 0.375rem; /* Corrected unit from "rem" to "0.375rem" */
+    padding: .375rem .75rem; /* Corrected unit from ".375rem" to "0.375rem" */
+    font-size: 0.8rem;
+    line-height: 1.5;  
+    color: #495057;      
+    background-color: #fff;  
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;  /*(Border-radius is commented out) */
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out; 
+}
+
+#subscribe-form > input:focus {
+    border-color: #80bdff; /* Border color on focus */
+    outline: 0; /* Removes the default focus outline */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Adds a subtle glow effect on focus */
 }
 
