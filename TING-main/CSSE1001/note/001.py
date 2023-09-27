@@ -1435,3 +1435,9 @@ self.moved_crate = self.entities.get((new_row, new_col))
 获取value值：
 self.entities[self.prev_crate_position] = self.moved_crate
 -------------------------------------------------------------------------------------------
+he underscores (_) are commonly used as throwaway variable names in Python
+line = "Hello World from Python"
+_, _, line = line.partition(' ')
+print(line)  # Outputs: 'World from Python'
+-------------------------------------------------------------------------------------------
+.split()后，给出的是一个list
