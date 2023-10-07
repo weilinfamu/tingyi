@@ -1,5 +1,5 @@
 html, body {
-    background-color: rgba(27, 175, 52, 0.464);
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -62,31 +62,31 @@ h1{
     height:auto;
 }
 
-figcaption{
-    color: white;
-    font-weight: 100;
-}
+/* ... (Your existing CSS styles) ... */
 
-/* New styles based on the image */
 .sports-section {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    margin: 20px 0;
-}
-
-.sport {
-    width: 30%;
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
+    display: flex;       /* This will arrange the child elements (figures) in a row */
+    justify-content: space-between;  /* This will put some space between the figures */
+    margin-bottom: 20px; /* Some bottom spacing for visual clarity */
 }
 
 .sport img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+    max-width: 100%;   /* Ensures the image scales down if it's too large */
+    height: auto;      /* Maintains the image's aspect ratio */
 }
+
+.sport {
+    flex: 1;         /* Allows each sport to take an equal amount of space */
+    margin: 0 10px;  /* Gives each figure a little margin on left and right */
+}
+
+
+.sport figcaption {
+    color: #000; /* Adjust the color based on your design */
+    font-size: 16px; /* Caption font size */
+    margin-top: 5px; /* Space at the top of the caption */
+}
+
 
 .buttons-section {
     display: flex;
@@ -124,5 +124,33 @@ figcaption{
     border: none;
     cursor: pointer;
 }
+/* Flexbox layout for overall page */
+flex-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-   
+
+@media only screen and (min-width: 1195px) {
+    .flex-header-menu {
+        display: block; /* Show the header */
+    }
+}
+
+.flex-header-menu, .flex-footer-menu, .flex-side-menu {
+    flex-shrink: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 0px 4px 0px 4px;
+}
+
+
+
+.flex-side-menu {
+    display: none; /* Hide the side menu */
+}
+
+.flex-footer-menu {
+    display: block; /* Show the footer */
+}
