@@ -6,40 +6,44 @@ html, body {
     width: 100%;   
 }
 
-body{
+body {
+    background-color: #fff;
+    color: #000;
     font-family: 'Poppins', sans-serif;
 }
 
-h1{
-    color:darkorange;
-    font-weight: 300; 
+h1 {
+    color: darkorange;
+    font-weight: 600;
     text-align: center;  
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: auto auto auto; 
+    gap: 20px;
 }
 
 .brand {
-    grid-column: 1 / span 4;
-    grid-row: 1; 
-    background-color: rgba(27, 175, 52, 0.464);
+    flex: 1;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding-left: 20px;
+   
 }
 
 .page-links {
-    grid-column: 1 / span 4;
-    grid-row: 2;
-    text-align: center;
-    background-color: rgba(27, 175, 52, 0.464);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 5%;
+    width:100%;
 }
 
+
 .main {
-    grid-column: 1 / -1;
-    grid-row: 3;
-    width: 75vw;
-    margin: 0 auto;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -49,44 +53,45 @@ h1{
 
 .menu-button {
     font-size: 20px;
-    color: white;
+    border: 1px solid #379EA8;
     background-color: #379EA8;
-    padding: 2px 20px;
-    border-style: solid;
+    color: white;
+    padding: 10px 20px;
     border-radius: 5px;
-    border-color: white; 
+    transition: background-color 0.3s;
 }
 
-.home_splash{
-    width: 100%;
-    height:auto;
+.menu-button:hover {
+    background-color: #2c7e91;
 }
 
-/* ... (Your existing CSS styles) ... */
+
+
 
 .sports-section {
-    display: flex;       /* This will arrange the child elements (figures) in a row */
-    justify-content: space-between;  /* This will put some space between the figures */
-    margin-bottom: 20px; /* Some bottom spacing for visual clarity */
-}
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0;
+}   
 
 .sport img {
-    max-width: 100%;   /* Ensures the image scales down if it's too large */
-    height: auto;      /* Maintains the image's aspect ratio */
+    max-width: 100%;
+    height: 250px;
+    width: auto;
+    display: block;
 }
 
 .sport {
-    flex: 1;         /* Allows each sport to take an equal amount of space */
-    margin: 0 10px;  /* Gives each figure a little margin on left and right */
+    flex: 1;
+    margin: 0 15px;
+    box-sizing: border-box;
 }
-
 
 .sport figcaption {
-    color: #000; /* Adjust the color based on your design */
-    font-size: 16px; /* Caption font size */
-    margin-top: 5px; /* Space at the top of the caption */
+    color: #000;
+    font-size: 16px;
+    margin-top: 5px;
 }
-
 
 .buttons-section {
     display: flex;
@@ -105,17 +110,17 @@ h1{
     cursor: pointer;
 }
 
-.search-bar {
+#search-bar {
     display: flex;
     justify-content: space-between;
     width: 50%;
     margin: 20px auto;
+    border: 2px solid #379EA8;
+    border-radius: 5px 0 0 5px;
 }
 
-#searchBar {
-    width: 80%;
-    padding: 5px;
-}
+
+
 
 #searchButton {
     width: 18%;
@@ -123,34 +128,40 @@ h1{
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 0 5px 5px 0;
 }
-/* Flexbox layout for overall page */
-flex-container {
+
+.flex-container {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-
 @media only screen and (min-width: 1195px) {
     .flex-header-menu {
-        display: block; /* Show the header */
+        display: block;
+        padding: 10px 0;
+        background-color: #004466;
     }
 }
 
 .flex-header-menu, .flex-footer-menu, .flex-side-menu {
     flex-shrink: 0;
-    background-color: #000;
+    background-color:#004466;
     color: #fff;
     padding: 0px 4px 0px 4px;
 }
-
-
-
+.flex-header-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #004466;
+}
 .flex-side-menu {
-    display: none; /* Hide the side menu */
+    display: none;
 }
 
 .flex-footer-menu {
-    display: block; /* Show the footer */
+    display: block;
 }

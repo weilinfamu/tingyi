@@ -1,0 +1,40 @@
+body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.contact-form, .contact-info {
+    width: 45%;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+button {
+    margin-top: 10px;
+    padding: 5px 15px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+footer {
+    clear: both;
+    background-color: #000000;
+    padding: 20px 0;
+    color: #ffffff;
+}
