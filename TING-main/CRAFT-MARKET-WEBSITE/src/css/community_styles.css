@@ -13,7 +13,12 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    flex-direction: column; /* This is added for responsive behavior */
+    flex-direction: row; /* This is added for responsive behavior */
+}
+header .right-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .menu-icon img {
@@ -105,11 +110,28 @@ nav a {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
+    padding: 5px 0; /* Added padding to the container */
+    background-color: rgba(0, 0, 0, 0.05); /* Light gray background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
 }
 
 .character {
+    display: flex; /* Make it a flex container to align icon and letter */
+    align-items: center; /* Align items vertically in the center */
     margin: 0 5px;
     font-size: 14px;
+    padding: 5px 10px; /* Added padding for spacing */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition effect for hover */
+}
+.character:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Light gray background on hover */
+}
+.character img {
+    width: 20px; /* Adjust width according to your needs */
+    height: 20px; /* Adjust height according to your needs */
+    margin-right: 5px; /* Space between the icon and the letter */
 }
 
 .find-community {
@@ -163,6 +185,12 @@ nav a {
     flex-direction: row;  /* 将其改为行，使其从左到右显示 */
     position: relative;  /* 以便子元素（图片）绝对定位于其内 */
 }
+.right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 #location-input:target { /* Show the input when its ID is targeted */
     display: block;
 }
