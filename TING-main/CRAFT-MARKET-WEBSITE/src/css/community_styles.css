@@ -1,20 +1,66 @@
-/* Community-specific styles */
+/* Body styling */
 body {
     background-color: #f9f9f9;
+    font-family: 'Poppins', sans-serif;
 }
 
+/* Header styling */
 header {
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column; /* This is added for responsive behavior */
+}
+
+.menu-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Main navigation */
+nav {
+    display: flex;
+    align-items: center;
 }
 
 nav a {
-    margin-right: 20px;
+    margin: 0 10px;
     text-decoration: none;
-    color: #333;
+    color: #007BFF; /* ③: Updated color to blue */
 }
 
+.main-nav a {
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-weight: 600;
+}
+
+.main-nav a:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+/* User actions in header */
+.user-actions {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.user-actions a {
+    text-decoration: none;
+    color: #333;
+    background-color: rgba(0,0,0,0.1);
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Featured groups styling */
 .featured-groups .group {
     display: flex;
     align-items: center;
@@ -26,16 +72,107 @@ nav a {
     margin-right: 10px;
 }
 
+.group p {
+    flex-grow: 1;
+    margin: 0;
+}
+
+/* Find community/search styling */
+.search-container {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex-grow: 1;
+    position: relative;
+    margin-top: 20px;
+    width: 100%;  /* 使搜索容器占据整个宽度 */
+}
+
+.search-icon {
+    width: 25px; /* Slightly increased for better proportion */
+    margin-left: 10px;
+}
+.location-input {
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 5px 0 0 5px;
+}
+
+.characters {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.character {
+    margin: 0 5px;
+    font-size: 14px;
+}
+
 .find-community {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 40px;
+}
+
+.latest-local-place {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
     margin-top: 20px;
 }
 
+/* Activities styling */
+
+
+.activities .activity-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.activities button {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 15px 30px;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.activities button:hover {
+    background-color: #0056b3;
+}
+/* Additional styles for location input and search button */
+.location-input, .search-btn {
+    flex-grow: 1;
+}
+/* ... */
+.find-community {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-direction: row;  /* 将其改为行，使其从左到右显示 */
+    position: relative;  /* 以便子元素（图片）绝对定位于其内 */
+}
+#location-input:target { /* Show the input when its ID is targeted */
+    display: block;
+}
+/* ... */
 .activities img {
-    width: 100%;
-    max-height: 400px;
+    width: 40%;  /* 减小宽度 */
+    max-height: 250px;  /* 减小高度 */
     object-fit: cover;
     margin: 20px 0;
+    position: absolute;  
+    bottom: 20px;  
+    right: 20px;  /* 改为固定值以达到期望的位置 */
 }

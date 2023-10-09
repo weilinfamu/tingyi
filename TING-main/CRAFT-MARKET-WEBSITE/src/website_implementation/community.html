@@ -6,18 +6,21 @@
     <title>Forum for Wellness Community</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="path/to/general_styles.css">
-    <link rel="stylesheet" href="path/to/community_styles.css">
+    <link  rel="stylesheet" href="../css/community_styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
+  
 </head>
 <body>
     <header>
-        <nav>
+        <div class="menu-icon">
+            <img src="../images/menu.jpg" alt="Menu Icon">
+        </div>
+        <nav class="main-nav">
             <a href="#">TOPICS</a>
             <a href="#">RESOURCES</a>
             <a href="#">PROFESSIONAL</a>
-            <a href="#">COMMUNITY</a>
             <a href="#">NEWSLETTER</a>
         </nav>
         <div class="user-actions">
@@ -25,23 +28,99 @@
         </div>
     </header>
     <main>
+       
+
         <section class="featured-groups">
             <h2>Featured Groups</h2>
-            <!-- ... -->
             <div class="group">
-                <img src="path-to-icon.jpg" alt="Football Icon">
+                <img src="../images/football.png" alt="Football Icon">
                 <p>Football (Soccer)</p>
             </div>
+            <div class="group">
+                <img src="../images/basketball.png" alt="Basketball Icon">
+                <p>Basketball</p>
+            </div>
+            <div class="group">
+                <img src="../images/tennis.jpg" alt="Tennis Icon">
+                <p>Tennis</p>
+            </div>
+            <div class="group">
+                <img src="../images/golf.png" alt="Golf Icon">
+                <p>Golf</p>
+            </div>
+            <div class="group">
+                <img src="../images/cycling.png" alt="Cycling Icon">
+                <p>Cycling</p>
+            </div>
+            <div class="group">
+                <img src="../images/extreme_sports.png" alt="Extreme Sports Icon">
+                <p>Extreme Sports</p>
+            </div>
+            <div class="group">
+                <img src="../images/running.png" alt="Running Icon">
+                <p>Running</p>
+            </div>
+            <div class="group">
+                <img src="../images/yoga.png" alt="Yoga Icon">
+                <p>Yoga</p>
+            </div>
+            <div class="group">
+                <img src="../images/climbing.png" alt="Climbing Icon">
+                <p>Climbing</p>
+            </div>
+        </section>
+
             <!-- other groups -->
-        </section>
-        <section class="find-community">
-            <input type="text" placeholder="Find community in your place">
+    <section class="find-community">
+        <div class="search-section">
+            <label for="location-input">
+                    <img src="..images/location.jpg" alt="Location Icon">
+            </label>
+            <input type="text" id="location-input" class="location-input" placeholder="Your Location" hidden>
+            <div class="search-container">
+                    <input type="text" placeholder="Find community in your place">
+                    <img src="path-to-search-icon.png" alt="Search Icon" class="search-icon">
+            </div>
             <button>Search</button>
-        </section>
-        <section class="activities">
-            <img src="path-to-community-photo.jpg" alt="Community Photo">
-            <button>Try the latest activity in your place to go</button>
-        </section>
+            <div class="characters">
+                <div class="characters">
+                    <span class="character"><img src="path-to-icon/A-icon.png" alt="A Icon">A</span>
+                    <span class="character"><img src="path-to-icon/B-icon.png" alt="B Icon">B</span>
+                    <span class="character"><img src="path-to-icon/C-icon.png" alt="C Icon">C</span>
+                    <span class="character"><img src="path-to-icon/D-icon.png" alt="D Icon">D</span>
+                    <span class="character"><img src="path-to-icon/E-icon.png" alt="E Icon">E</span>
+                    <span class="character"><img src="path-to-icon/F-icon.png" alt="F Icon">F</span>
+                    <span class="character"><img src="path-to-icon/G-icon.png" alt="G Icon">G</span>
+                    <span class="character"><img src="path-to-icon/H-icon.png" alt="H Icon">H</span>
+                    <span class="character"><img src="path-to-icon/I-icon.png" alt="I Icon">I</span>
+                    <span class="character"><img src="path-to-icon/J-icon.png" alt="J Icon">J</span>
+                    <span class="character"><img src="path-to-icon/K-icon.png" alt="K Icon">K</span>
+                    <span class="character"><img src="path-to-icon/L-icon.png" alt="L Icon">L</span>
+                    <span class="character"><img src="path-to-icon/M-icon.png" alt="M Icon">M</span>
+                    <span class="character"><img src="path-to-icon/N-icon.png" alt="N Icon">N</span>
+                    <span class="character"><img src="path-to-icon/O-icon.png" alt="O Icon">O</span>
+                    <span class="character"><img src="path-to-icon/P-icon.png" alt="P Icon">P</span>
+                    <span class="character"><img src="path-to-icon/A-icon.png" alt="A Icon">Q</span>
+                    <span class="character"><img src="path-to-icon/B-icon.png" alt="B Icon">R</span>
+                    <span class="character"><img src="path-to-icon/C-icon.png" alt="C Icon">S</span>
+                    <span class="character"><img src="path-to-icon/D-icon.png" alt="D Icon">T</span>
+                    <span class="character"><img src="path-to-icon/E-icon.png" alt="E Icon">U </span>
+                    <span class="character"><img src="path-to-icon/F-icon.png" alt="F Icon">V </span>
+                    <span class="character"><img src="path-to-icon/G-icon.png" alt="G Icon">W </span>
+                    <span class="character"><img src="path-to-icon/H-icon.png" alt="H Icon">X</span>
+                    <span class="character"><img src="path-to-icon/I-icon.png" alt="I Icon">Y </span>
+                    <span class="character"><img src="path-to-icon/J-icon.png" alt="J Icon">Z</span>
+                </div>
+        </div>
+            
+    </section>
+    <section class="activities">
+            
+            <div class="activity-btn-container">
+                <button>Try the latest activity in your place to go</button>
+            </div>
+            <img src="../images/picture6.jpg" alt="Community Photo">
+    </section>
     </main>
 </body>
 </html>
