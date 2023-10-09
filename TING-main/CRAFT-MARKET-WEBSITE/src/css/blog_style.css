@@ -110,8 +110,8 @@ main article a:hover {
     color: #fff;
 }
 .author-name {
-    font-family: 'Condiment', cursive;  /* 请确保Condiment字体已被正确导入 */
-    font-size: 20px; /* 可根据需要调整 */
+    font-family: 'Condiment', cursive;  
+    
 }
 
 
