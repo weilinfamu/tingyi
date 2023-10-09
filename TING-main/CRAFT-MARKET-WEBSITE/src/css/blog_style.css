@@ -1,36 +1,140 @@
-/* Blog-specific styles */
+body, h1, h2, p, a, button {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
 body {
     background-color: #f9f9f9;
+    font-size: 16px;
+    line-height: 1.5;
+    
 }
 
 header {
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+    background-color: #3A7BD5;
 }
 
-.categories, .user-actions {
+header h1 {
+    color: #fff;
+    font-size: 24px;
+}
+
+nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.categories {
+    display: none; 
+}
+
+.user-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.user-actions a, .user-actions button {
+    padding: 5px 15px;
+    color: #fff;
+    transition: background-color 0.3s;
+    border: 1px solid transparent;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.user-actions a:hover, .user-actions button:hover {
+    background-color: #2A5A8D;
+}
+
+.user-actions button {
+    background-color: #FFA726;
+    cursor: pointer;
 }
 
 main article {
     background-color: #fff;
-    padding: 20px;
+    padding: 40px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin: 20px 0;
+    margin: 40px 10%;
+    text-align: center;
+    border-radius: 5px;
 }
 
 main article img {
     width: 100%;
     max-height: 250px;
     object-fit: cover;
+    margin-bottom: 20px;
+}
+
+main article h2 {
+    color: #444;
+    font-size: 26px;
+    margin-bottom: 20px;
 }
 
 main article p {
     margin: 15px 0;
-    color: #555;
+    color: #777;
 }
 
+main article a {
+    color: #007BFF;
+    padding: 5px 15px;
+    border: 1px solid #007BFF;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+main article a:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+.author-name {
+    font-family: 'Condiment', cursive;  /* 请确保Condiment字体已被正确导入 */
+    font-size: 20px; /* 可根据需要调整 */
+}
+
+
+.blog-type {
+    font-weight: bold;
+}
+
+
+
+
+footer .pagination {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+footer .pagination a {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.2s;
+}
+
+footer .pagination a:hover {
+    text-decoration: underline;
+}
