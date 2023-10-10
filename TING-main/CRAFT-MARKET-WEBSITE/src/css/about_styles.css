@@ -66,6 +66,11 @@ header {
 
 .content {
     padding: 50px;
+
+}
+.team img {
+    max-width: 500px; /* Adjust pixel value to your desired maximum width */
+    height: auto;
 }
 
 
