@@ -17,11 +17,13 @@ header {
     align-items: center;
     padding: 10px 5%;
     background-color: #3A7BD5;
+    flex-wrap: wrap;    /* it mainly allow to change line!*/
 }
 
 header h1 {
     color: #fff;
     font-size: 24px;
+    flex-basis: 100%; /* This ensures the title takes up the full width of its container. */
 }
 
 nav {
@@ -121,20 +123,41 @@ main article a:hover {
 
 
 
-
 footer .pagination {
     display: flex;
     justify-content: center;
     padding: 10px 0;
+    align-items: center;          
 }
 
 footer .pagination a {
-    margin: 0 5px;
     text-decoration: none;
     color: #007BFF;
-    transition: color 0.2s;
+    padding: 5px 10px;            
+    margin: 0 5px;
+    border: 1px solid #000000;   /* Set border color to black */
+    transition: color 0.2s, border-color 0.2s;  
+    width: 18px;                 /* Set fixed width */
+    height: 39px;                /* Set fixed height */
+    display: flex;               /* For centering the img inside */
+    align-items: center;         /* Vertical alignment */
+    justify-content: center;     /* Horizontal alignment */
+}
+
+footer .pagination img {
+    max-width: 100%;             /* Ensures img scales and doesn't exceed its container */
+    max-height: 100%;            /* Ensures img scales and doesn't exceed its container */
 }
 
 footer .pagination a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    border-color: #007BFF;       /* Change border color to blue on hover */
 }
+
+footer .pagination .active {
+    background-color: #007BFF;   
+    color: #ffffff;              
+}
+
+
+
