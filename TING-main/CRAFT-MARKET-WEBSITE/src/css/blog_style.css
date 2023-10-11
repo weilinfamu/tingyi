@@ -4,160 +4,177 @@ body, h1, h2, p, a, button {
     font-family: 'Poppins', sans-serif;
 }
 
+h1, h2 {
+    font-weight: 600;
+}
+
 body {
     background-color: #f9f9f9;
     font-size: 16px;
     line-height: 1.5;
-    
 }
 
 header {
+    background-color: #1e1e1e;
+    padding: 10px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5%;
-    background-color: #3A7BD5;
-    flex-wrap: wrap;    /* it mainly allow to change line!*/
+    
 }
 
 header h1 {
     color: #fff;
     font-size: 24px;
-    flex-basis: 100%; /* This ensures the title takes up the full width of its container. */
-}
-
-nav {
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    color: #fff;
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 5px 10px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-nav a:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-}
-
-.categories {
-    display: none; 
-}
-
-.user-actions {
-    display: flex;
-    gap: 10px;
-}
-
-.user-actions a, .user-actions button {
-    padding: 5px 15px;
-    color: #fff;
-    transition: background-color 0.3s;
-    border: 1px solid transparent;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.user-actions a:hover, .user-actions button:hover {
-    background-color: #2A5A8D;
-}
-
-.user-actions button {
-    background-color: #FFA726;
-    cursor: pointer;
-}
-
-main article {
-    background-color: #fff;
-    padding: 40px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    margin: 40px 10%;
-    text-align: center;
-    border-radius: 5px;
-}
-
-main article img {
-    width: 100%;
-    max-height: 250px;
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-main article h2 {
-    color: #444;
-    font-size: 26px;
-    margin-bottom: 20px;
-}
-
-main article p {
-    margin: 15px 0;
-    color: #777;
-}
-
-main article a {
-    color: #007BFF;
-    padding: 5px 15px;
-    border: 1px solid #007BFF;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.2s;
-}
-
-main article a:hover {
-    background-color: #007BFF;
-    color: #fff;
-}
-.author-name {
-    font-family: 'Condiment', cursive;  
-    
-}
-
-
-.blog-type {
+    flex-basis: 100%;
+    margin: 10px 0;
+    font-family: 'Georgia', serif;
     font-weight: bold;
 }
 
+.fixed-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
 
+.fixed-nav nav {
+    display: flex;
+    align-items: center;
 
-footer .pagination {
+}
+
+.free {
+    display: flex;
+    margin-left: auto;
+    color: #fff;
+    white-space: nowrap;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav a {
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    color: #fff;
+    background-color: transparent;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* CSS for the carousel */
+.carousel {
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .slide {
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s;
+  }
+  
+  img {
+    width: 50%;
+     
+    max-width: 500px; /* This sets a maximum width for the image, you can adjust or remove this line */
+    display: block;
+    
+  }
+  
+  p {
+    width: 50%;
+  }
+  
+
+main article {
+    display: flex;
+    gap: 20px;
+    padding: 20px 10%;
+    margin: 40px
+    10%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    main article img {
+    flex: 1;
+    max-height: 250px;
+    object-fit: cover;
+    }
+    
+    .article-content {
+    flex: 1;
+    }
+    
+    .button-style {
+    background-color: #FF5722;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    }
+    
+    .button-style:hover {
+    background-color: #e04e1e;
+    }
+    
+    .author-name {
+    font-family: 'Condiment', cursive;
+    }
+    
+    .blog-type {
+    font-weight: bold;
+    }
+    
+    footer .pagination {
     display: flex;
     justify-content: center;
     padding: 10px 0;
-    align-items: center;          
-}
-
-footer .pagination a {
+    align-items: center;
+    }
+    
+    footer .pagination a {
     text-decoration: none;
     color: #007BFF;
-    padding: 5px 10px;            
+    padding: 5px 10px;
     margin: 0 5px;
-    border: 1px solid #000000;   /* Set border color to black */
-    transition: color 0.2s, border-color 0.2s;  
-    width: 18px;                 /* Set fixed width */
-    height: 39px;                /* Set fixed height */
-    display: flex;               /* For centering the img inside */
-    align-items: center;         /* Vertical alignment */
-    justify-content: center;     /* Horizontal alignment */
-}
-
-footer .pagination img {
-    max-width: 100%;             /* Ensures img scales and doesn't exceed its container */
-    max-height: 100%;            /* Ensures img scales and doesn't exceed its container */
-}
-
-footer .pagination a:hover {
+    border: 1px solid #000000;
+    transition: color 0.2s, border-color 0.2s;
+    width: 18px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    footer .pagination img {
+    max-width: 100%;
+    max-height: 100%;
+    }
+    
+    footer .pagination a:hover {
     text-decoration: none;
-    border-color: #007BFF;       /* Change border color to blue on hover */
-}
-
-footer .pagination .active {
-    background-color: #007BFF;   
-    color: #ffffff;              
-}
-
-
-
+    border-color: #007BFF;
+    }
+    
+    footer .pagination .active {
+    background-color: #007BFF;
+    color: #ffffff;
+    }

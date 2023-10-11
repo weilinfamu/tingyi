@@ -4,4 +4,3 @@ def generate_initial_pieces(num_pieces:int):
       for i in range (1,num_pieces+1):
         pieces.append(i)
       return pieces
--------------------------------------
