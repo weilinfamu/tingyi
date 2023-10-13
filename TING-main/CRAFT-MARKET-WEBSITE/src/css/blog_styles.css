@@ -42,7 +42,6 @@ header h1 {
 .fixed-nav nav {
     display: flex;
     align-items: center;
-
 }
 
 .free {
@@ -73,7 +72,9 @@ nav a:hover {
 /* CSS for the carousel */
 .carousel {
     width: 100%;
-    display: flex;
+    position: relative;
+   
+    display: inline-flex;
     overflow: hidden;
     position: relative;
   }
@@ -86,7 +87,20 @@ nav a:hover {
     align-items: center;
     transition: all 0.5s;
   }
-  
+  /* Styles for the carousel buttons */
+button#prev, button#next {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.5s;
+}
+
+button#prev:hover, button#next:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
   img {
     width: 50%;
      
@@ -97,6 +111,7 @@ nav a:hover {
   
   p {
     width: 50%;
+    color: blue;
   }
   
 

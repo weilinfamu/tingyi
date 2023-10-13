@@ -4,32 +4,49 @@ $(document).ready(function() {
   const slideWidth = $(slides[0]).outerWidth();
   const numberOfSlides = slides.length;
 
-  slides.each((index, slide) => {
-    $(slide).css('left', `${index * slideWidth}px`);
+  // Add clones to the beginning and end
+  $('.carousel').prepend($(slides[slides.length - 1]).clone());
+  $('.carousel').append($(slides[0]).clone());
+
+  // Adjust the carousel width and initial position
+  $('.carousel').css('width', slideWidth * (numberOfSlides + 2) + 'px');
+  $('.carousel').css('transform', 'translateX(' + (-slideWidth) + 'px)');
+
+  $('#next').click(function() {
+      currentSlide++;
+      if (currentSlide > numberOfSlides) {
+          currentSlide = 1;
+          $('.carousel').css('transition', 'none');
+          $('.carousel').css('transform', 'translateX(' + (-slideWidth) + 'px)');
+          setTimeout(() => {
+              $('.carousel').css('transition', 'transform 0.4s ease-in-out');
+              nextSlide();
+          });
+          return;
+      }
+      nextSlide();
   });
 
-  $('#next').click(nextSlide);
-
   $('#prev').click(function() {
-    currentSlide = (currentSlide - 1 + numberOfSlides) % numberOfSlides;
-    updateSlides();
+      currentSlide--;
+      if (currentSlide < 0) {
+          currentSlide = numberOfSlides - 1;
+          $('.carousel').css('transition', 'none');
+          $('.carousel').css('transform', 'translateX(' + (-slideWidth * numberOfSlides) + 'px)');
+          setTimeout(() => {
+              $('.carousel').css('transition', 'transform 0.4s ease-in-out');
+              prevSlide();
+          });
+          return;
+      }
+      prevSlide();
   });
 
   function nextSlide() {
-    console.log("Entering nextSlide function");  // New log statement
-    currentSlide = (currentSlide + 1) % numberOfSlides;
-    updateSlides();
-    console.log("Exiting nextSlide function");   // New log statement
+      $('.carousel').css('transform', 'translateX(' + (-slideWidth * (currentSlide + 1)) + 'px)');
   }
 
-  function updateSlides() {
-    console.log("Entering updateSlides function");   // New log statement
-    slides.each((index, slide) => {
-      const newPosition = (index - currentSlide) * slideWidth;
-      $(slide).css('left', `${newPosition}px`);
-    });
-    console.log("Exiting updateSlides function");    // New log statement
+  function prevSlide() {
+      $('.carousel').css('transform', 'translateX(' + (-slideWidth * (currentSlide + 1)) + 'px)');
   }
-
-  setInterval(nextSlide, 6000);
 });
