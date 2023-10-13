@@ -71,49 +71,55 @@ nav a:hover {
 
 /* CSS for the carousel */
 .carousel {
-    width: 100%;
-    position: relative;
-   
+    width: 75%;
+    overflow: hidden; /* Hide the overflow content (like cloned slides) */
     display: inline-flex;
-    overflow: hidden;
     position: relative;
-  }
-  
-  .slide {
+    margin: 0 auto;
+    display: flex;
+}
+
+.slide {
     min-width: 100%;
     display: flex;
- 
     justify-content: space-between;
     align-items: center;
     transition: all 0.5s;
-  }
-  /* Styles for the carousel buttons */
+    flex: 0 0 auto;
+    float: left;
+
+}
+
+/* Styles for the carousel buttons */
 button#prev, button#next {
-    background-color: blue;
+    background-color: rgb(0, 102, 255);
     color: white;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     transition: background-color 0.5s;
+    cursor: pointer; /* Change the cursor to a hand when hovering over the buttons */
 }
 
 button#prev:hover, button#next:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 102, 255, 0.7); /* Slight transparency on hover */
+    color: white; /* Keep the text color white on hover */
 }
 
-  img {
-    width: 50%;
-     
-    max-width: 500px; /* This sets a maximum width for the image, you can adjust or remove this line */
+img {
+    width: 45%;
+    max-width: 450px;
     display: block;
-    
-  }
-  
-  p {
-    width: 50%;
-    color: blue;
-  }
-  
+    margin-right: 5%;
+}
+
+
+p {
+    width: 45%;
+    color: rgb(14, 14, 15);
+}
+
+
 
 main article {
     display: flex;
