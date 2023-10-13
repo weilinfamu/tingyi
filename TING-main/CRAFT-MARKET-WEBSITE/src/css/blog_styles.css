@@ -69,55 +69,74 @@ nav a:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 水平居中 */
+}
 /* CSS for the carousel */
 .carousel {
-    width: 75%;
-    overflow: hidden; /* Hide the overflow content (like cloned slides) */
-    display: inline-flex;
+    width: 200%;  /* 两个slide，所以是200% */
+    overflow: hidden;
+    display: flex;
     position: relative;
     margin: 0 auto;
     display: flex;
+    align-items: center; 
 }
 
 .slide {
-    min-width: 100%;
+    width: 50%;  /* 两个slide，每个slide的宽度是50% */
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 0.5s;
-    flex: 0 0 auto;
-    float: left;
-
+    flex-direction: column; /* 垂直排列 */
+    justify-content: center; /* 垂直居中 */
+    transition: all 0.5s;
 }
 
-/* Styles for the carousel buttons */
+img {
+    width: 100%;  /* 设置图片宽度为45% */
+    max-width: 450px;
+    display: block;
+    margin-right: 5%;  /* 设置图片右边距为5% */
+ 
+       
+    margin-bottom: 20px; /* 图片和文本之间的间距 */
+    }
+
+
+p {
+    width: 40%;  /* 设置段落宽度为45% */
+    color: rgb(14, 14, 15);
+}
+
+
+
+.buttons-container {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    gap: 10px; /* 按钮之间的间距 */
+    margin-top: 20px; /* 轮播图和按钮之间的间距 */
+}
+
 button#prev, button#next {
-    background-color: rgb(0, 102, 255);
+    background-color: #1976D2;
     color: white;
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
     transition: background-color 0.5s;
-    cursor: pointer; /* Change the cursor to a hand when hovering over the buttons */
+    cursor: pointer;
 }
 
 button#prev:hover, button#next:hover {
-    background-color: rgba(0, 102, 255, 0.7); /* Slight transparency on hover */
-    color: white; /* Keep the text color white on hover */
-}
-
-img {
-    width: 45%;
-    max-width: 450px;
-    display: block;
-    margin-right: 5%;
+    background-color: #1565C0; /* 更深的颜色作为hover效果 */
+    color: white;
 }
 
 
-p {
-    width: 45%;
-    color: rgb(14, 14, 15);
-}
 
 
 
@@ -138,33 +157,33 @@ main article {
     object-fit: cover;
     }
     
-    .article-content {
-    flex: 1;
+    
+    .author-name {
+        font-family: 'Condiment', cursive;
     }
+        
+    .blog-type {
+        font-weight: bold;
+     }
     
     .button-style {
-    background-color: #FF5722;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 20px;
-    text-decoration: none;
-    transition: background-color 0.2s;
+        background-color: #2196F3; /* 使用图片中的颜色 */
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-weight: bold;
+        position: relative;
+        top: -10px;
+        text-decoration: none;
+        transition: background-color 0.2s;
     }
     
     .button-style:hover {
-    background-color: #e04e1e;
+        background-color: #1976D2; /* 使用稍微深一点的颜色作为hover效果 */
     }
     
-    .author-name {
-    font-family: 'Condiment', cursive;
-    }
-    
-    .blog-type {
-    font-weight: bold;
-    }
+   
     
     footer .pagination {
     display: flex;
