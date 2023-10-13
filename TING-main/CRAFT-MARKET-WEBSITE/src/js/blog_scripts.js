@@ -31,5 +31,5 @@ $(document).ready(function() {
     console.log("Exiting updateSlides function");    // New log statement
   }
 
-  setInterval(nextSlide, 9000);
+  setInterval(nextSlide, 6000);
 });
