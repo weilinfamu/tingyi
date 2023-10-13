@@ -75,11 +75,13 @@ nav a:hover {
     width: 100%;
     display: flex;
     overflow: hidden;
+    position: relative;
   }
   
   .slide {
     min-width: 100%;
     display: flex;
+ 
     justify-content: space-between;
     align-items: center;
     transition: all 0.5s;
