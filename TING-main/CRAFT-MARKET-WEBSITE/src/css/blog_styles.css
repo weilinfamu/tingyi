@@ -228,3 +228,70 @@ main article {
     background-color: #007BFF;
     color: #ffffff;
     }
+    footer {
+        background-color: #030a11;
+        color: #ffffff; /* 设置默认字体颜色为白色 */
+        padding: 30px 0;
+    }
+    
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .footer-brand {
+        width: 30%;
+        flex: 0 0 30%;
+    }
+    
+    .footer-brand h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+        color: #1976D2; /* 设置加粗的标题颜色为蓝色 */
+    }
+    
+    .footer-brand p {
+        margin-bottom: 20px;
+    }
+    
+    .footer-links {
+        display: flex;
+        width: 70%;
+        flex-wrap: wrap;
+    }
+    
+    .footer-section {
+        flex: 1;
+        min-width: 150px;
+    }
+    
+    .footer-section h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #1976D2; /* 设置加粗的子标题颜色为蓝色 */
+    }
+    
+    .footer-section ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .footer-section li {
+        margin-bottom: 8px;
+    }
+    
+    .footer-section li a {
+        color: #ffffff; /* 确保链接颜色是白色 */
+        text-decoration: none; /* 可以移除下划线 */
+    }
+    
+    .footer-section li a:hover {
+        text-decoration: underline; /* 当鼠标悬停时显示下划线 */
+    }
+    
+    .footer-bottom {
+        color: #ffffff; /* 确保底部文字颜色是白色 */
+    }
+    
