@@ -76,31 +76,35 @@ nav.main-nav a:hover {
     margin: 0;
 }
 
-.search-container {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 8px 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: 100%;
-    position: relative;
-    margin-top: 20px;
-}
 
-.search-icon {
-    width: 25px;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
+.search-section {
+    display: flex; /* 使用 flexbox */
+    align-items: center; /* 垂直居中对齐 */
+    width: 100%; /* 宽度为 100% */
+    padding: 10px 0; /* 添加一些上下填充 */
 }
 
 .location-input {
-    flex-grow: 1;
+    flex-grow: 1; /* 允许输入框增长 */
     border-radius: 5px;
-    padding: 8px;
+    padding: 10px 15px; /* 增加填充 */
     border: none;
+    font-size: 16px; /* 增加字体大小 */
+}
+
+.input-box select {
+    font-size: 16px; /* 增加字体大小 */
+    padding: 10px; /* 增加填充 */
+}
+
+.search-btn {
+    font-size: 16px; /* 增加字体大小 */
+    padding: 10px 20px; /* 增加填充 */
+    margin-left: 10px; /* 左边距 */
+}
+
+
+
 }
 .characters {
     display: flex;
