@@ -1,47 +1,74 @@
-html, body {
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;   
+.flex-container {
+    display: flex;
+    flex-direction: column;
 }
 
-body {
-    background-color: #fff;
-    color: #000;
-    font-family: 'Poppins', sans-serif;
+.flex-header-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff; /* 设置背景为白色 */
+    padding: 20px 40px; /* 增加一些内部填充 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    
 }
+
+
+
+.brand {
+    /* flex: 1;  // Commented out as it might not be needed for the header */
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;  /* Changed from white to #333 */
+    /* width: 100%;  // Commented out as it might not be needed for the header */
+    text-align: center;
+    padding-left: 20px;
+}
+
+.menu-button {
+    display: inline-flex; /* 设置为内联flex元素 */
+    background-color: transparent; /* 使背景透明 */
+    border: none; /* 去除边框 */
+    font-size: 16px;
+
+    color: #007BFF; /* 设置字体颜色 */
+    font-weight:bold;
+    cursor: pointer;
+    transition: color 0.2s; /* 可选：颜色过渡 */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    padding: 10px 20px; /* 根据需要添加适当的内边距 */
+}
+
+.menu-button:hover {
+    background-color: #2c7e91;
+}
+
+.flex-footer-menu{
+    flex-shrink: 0;
+    background-color: #fff;
+    color:#007BFF;
+    padding: 0px 4px 0px 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 可选：增加轻微的阴影 */
+}
+
+
+
+
+
+
+
+
 
 h1 {
     color: darkorange;
     font-weight: 600;
-    text-align: center;  
+    text-align: center;
 }
 
 .grid-container {
     display: grid;
     gap: 20px;
 }
-
-.brand {
-    flex: 1;
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    width: 100%;
-    text-align: center;
-    padding-left: 20px;
-   
-}
-
-.page-links {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 0 5%;
-    width:100%;
-}
-
 
 .main {
     text-align: center;
@@ -51,40 +78,23 @@ h1 {
     align-items: center;
 }
 
-.menu-button {
-    font-size: 20px;
-    border: 1px solid #379EA8;
-    background-color: #379EA8;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.menu-button:hover {
-    background-color: #2c7e91;
-}
-
-
-
-
 .sports-section {
     display: flex;
     justify-content: space-around;
     margin: 40px 0;
-}   
-
-.sport img {
-    max-width: 100%;
-    height: 250px;
-    width: auto;
-    display: block;
 }
 
 .sport {
     flex: 1;
     margin: 0 15px;
     box-sizing: border-box;
+}
+
+.sport img {
+    max-width: 100%;
+    height: 250px;
+    width: auto;
+    display: block;
 }
 
 .sport figcaption {
@@ -119,9 +129,6 @@ h1 {
     border-radius: 5px 0 0 5px;
 }
 
-
-
-
 #searchButton {
     width: 18%;
     background-color: #379EA8;
@@ -131,37 +138,11 @@ h1 {
     border-radius: 0 5px 5px 0;
 }
 
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
 @media only screen and (min-width: 1195px) {
     .flex-header-menu {
         display: block;
         padding: 10px 0;
-        background-color: #004466;
+        color: #007BFF;
+        background-color: #fff;
     }
-}
-
-.flex-header-menu, .flex-footer-menu, .flex-side-menu {
-    flex-shrink: 0;
-    background-color:#004466;
-    color: #fff;
-    padding: 0px 4px 0px 4px;
-}
-.flex-header-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 5%;
-    background-color: #004466;
-}
-.flex-side-menu {
-    display: none;
-}
-
-.flex-footer-menu {
-    display: block;
 }
