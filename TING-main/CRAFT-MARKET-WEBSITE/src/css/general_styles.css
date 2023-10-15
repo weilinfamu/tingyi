@@ -12,7 +12,10 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
     
 }
-
+.brand-and-links {
+    display: flex;
+    align-items: center;
+}
 
 
 .brand {
@@ -24,6 +27,39 @@
     text-align: center;
     padding-left: 20px;
 }
+.search-icon {
+    height: 20px; /* Adjust as needed */
+    width: 20px;  /* Adjust as needed */
+    margin-right: 5px; /* Space between the icon and the text or input */
+    margin-left: 5px; /* Space between the icon and the text or input */
+    }
+
+#search-bar {
+    display: flex;
+    align-items: center; /* Vertically center the search bar and button */
+    border: 2px solid black;
+    border-radius: 5px 0 0 5px;
+   
+}
+
+#searchBar {
+    flex-grow: 1; /* Allow the input to grow and take available space */
+    border: none; /* Remove the default border */
+    border-radius: 5px 0 0 5px; /* Round the left side of the input */
+    height: 40px; /* Specify the height of the input */    
+}
+
+
+#searchButton {
+    width: auto; /* Adjust the width to fit its content */
+    background-color:#007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0; /* Round the right side of the button */
+    height: 40px; /* Specify the height of the button */
+}
+
 
 .menu-button {
     display: inline-flex; /* 设置为内联flex元素 */
@@ -41,14 +77,6 @@
 
 .menu-button:hover {
     background-color: #2c7e91;
-}
-
-.flex-footer-menu{
-    flex-shrink: 0;
-    background-color: #fff;
-    color:#007BFF;
-    padding: 0px 4px 0px 4px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 可选：增加轻微的阴影 */
 }
 
 
@@ -77,6 +105,27 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+.intro-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5; /* Light gray background */
+    margin-top: 30px;
+}
+
+.join-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Blue background */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.join-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
 
 .sports-section {
     display: flex;
@@ -103,6 +152,39 @@ h1 {
     margin-top: 5px;
 }
 
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.filter {
+    margin: 0 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.fitness-journey {
+    text-align: center;
+    padding: 30px;
+    background-color: #eaeaea; /* Light gray background */
+}
+
+.learn-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Blue background */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.learn-more-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
 .buttons-section {
     display: flex;
     justify-content: space-between;
@@ -112,31 +194,65 @@ h1 {
 
 .btn {
     padding: 10px 20px;
-    background-color: #cfe8fc;
+    background-color: #fff;
     border: none;
     border-radius: 5px;
-    color: #000;
+    color: #007BFF;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    transition: color 0.3s;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
 }
 
-#search-bar {
+.footer-links {
     display: flex;
     justify-content: space-between;
-    width: 50%;
-    margin: 20px auto;
-    border: 2px solid #379EA8;
-    border-radius: 5px 0 0 5px;
+    padding: 0 10%;
 }
 
-#searchButton {
-    width: 18%;
-    background-color: #379EA8;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 0 5px 5px 0;
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
 }
+
+.footer-section h3 {
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #007BFF;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #007BFF;
+}
+
+
 
 @media only screen and (min-width: 1195px) {
     .flex-header-menu {
@@ -144,5 +260,6 @@ h1 {
         padding: 10px 0;
         color: #007BFF;
         background-color: #fff;
+      
     }
 }

@@ -15,18 +15,23 @@
 <body>
     <div class="flex-container">
         <header class="flex-header-menu header-menu" aria-label="Main menu">
-            <div class="brand">Wellness Community</div>
+            <div class="brand-and-links">
+                <div class="brand">Wellness Community</div>
 
-            <div class="page-links">
-                <a href="wellness.html"><button class="menu-button">Wellness Activities</button></a>
-                <a href="blog.html"><button class="menu-button">Blog</button></a>
-                <a href="community.html"><button class="menu-button">Community</button></a>
-                <a href="register.html"><button class="menu-button">Register/Login</button></a>
+                <div class="page-links">
+                    <a href="wellness.html"><button class="menu-button">Wellness Activities</button></a>
+                    <a href="blog.html"><button class="menu-button">Blog</button></a>
+                    <a href="community.html"><button class="menu-button">Community</button></a>
+                    <a href="register.html"><button class="menu-button">Register/Login</button></a>
 
+                </div>
             </div>
-             <!-- Search Box -->
-             <input type="text" id="searchBar" placeholder="SEARCH">
-             <button id="searchButton">Search</button>
+            <div id="search-bar">
+                <img src="media/images/amplifier.png" alt="Search" class="search-icon">
+                <input type="text" id="searchBar" placeholder="SEARCH">
+                <button id="searchButton">Search</button>
+            </div>
+            
 
         </header>
             
@@ -36,25 +41,37 @@
             <!-- Main content will go here -->
 
             <div class="grid-container">
-             
                 
                 <div class="main">
-                    <h1>Come and join our exercise community!</h1>
+                    <section class="intro-section">
+                        <h1>Come and join our exercise community!</h1>
+                        <p>Discover a variety of workouts, connect with fitness enthusiasts, and achieve your health goals together.</p>
+                        <a href="register.html" class="join-btn">Join Now</a>
+                    </section>
+                    
                    
                   
                     <!-- Sports Sections -->
+                    <!-- Sports Sections -->
                     <div class="sports-section">
+
+                        <!-- Filter Buttons -->
+                        <div class="filter-buttons">
+                            <button class="filter" data-filter="yearly">YEARLY</button>
+                            <button class="filter" data-filter="monthly">MONTHLY</button>
+                            <button class="filter" data-filter="weekly">WEEKLY</button>
+                        </div>
 
                         <figure class="sport">
                             <img src="media/images/picture1.jpg" alt="Climbing the mountain">
                             <figcaption>climbing</figcaption>
                         </figure>
-                        
+
                         <figure class="sport">
                             <img src="media/images/picture3.jpg" alt="Doing Yoga in community ">
                             <figcaption>Yoga</figcaption>
                         </figure>
-                        
+
                         <figure class="sport">
                             <img src="media/images/picture2.jpg" alt="Running with fellows">
                             <figcaption>Running</figcaption>
@@ -62,21 +79,52 @@
 
                     </div>
 
+                    <section class="fitness-journey">
+                        <p>Connect with fellow enthusiasts and embark on a journey that's not just about fitness. Dive deep into a community where passion meets purpose, where every step, stretch, and sweat leads to not only a healthier body but also a more fulfilled life. Together, we celebrate every milestone, support each other during challenges, and push boundaries to achieve our personal best. Join us, and discover a holistic approach to well-being that goes beyond the gym.</p>
+                        <a href="community.html" class="learn-more-btn">Learn More</a>
+                    </section>
+                    
 
-                    <p>connect with fellow enthusiasts, embark on a journey that's not just about fitness.</p>
-
-                    <!-- Buttons -->
-                    <div class="buttons-section">
-                        <a href="# remind myself not to forget give a link of community page" class="btn">Community Forum</a>
-                        <a href="# linn needed it will turn to AboutUs" class="btn">AboutUs</a>
-                        <a href="#link needed to contactus page" class="btn">ContactUs</a>
-                    </div>
+                   
                 </div>
             </div>
         </div>
         <footer class="flex-footer-menu footer-menu" aria-label="Main menu">
-            <p>Bottom Menu</p>
+            <!-- Buttons -->
+            <div class="buttons-section">
+                <a href="#link-to-community-page" class="btn">Community Forum</a>
+                <a href="#link-to-about-us" class="btn">About Us</a>
+                <a href="#link-to-contact-us" class="btn">Contact Us</a>
+            </div>
+        
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <p><strong>Email:</strong> info@example.com</p>
+                <p><strong>Phone:</strong> +1 (123) 456-7890</p>
+                <p><strong>Address:</strong> 123 Main St, City, Country</p>
+            </div>
+        
+            <!-- Social Media Links -->
+            <div class="social-media">
+                <a href="#link-to-facebook" class="social-icon">Facebook</a>
+                <a href="#link-to-twitter" class="social-icon">Twitter</a>
+                <a href="#link-to-instagram" class="social-icon">Instagram</a>
+            </div>
+        
+            <!-- Newsletter Signup -->
+            <div class="newsletter">
+                <p>Subscribe to our newsletter:</p>
+                <input type="email" placeholder="Your email address">
+                <button>Subscribe</button>
+            </div>
+        
+            <!-- Copyright and Legal Links -->
+            <div class="legal">
+                <p>&copy; 2023 Your Website Name. All rights reserved.</p>
+                <a href="#link-to-terms">Terms & Conditions</a> | <a href="#link-to-privacy">Privacy Policy</a>
+            </div>
         </footer>
+        
     </div>
 
     <script src="#"></script>
