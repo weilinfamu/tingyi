@@ -64,6 +64,7 @@ nav.main-nav a:hover {
     margin-right: 20px;
     cursor: pointer; /* 添加这一行 */
     transition: background-color 0.3s; /* 添加这一行 */
+}
 .group:hover {
     background-color: rgba(0, 0, 0, 0.05); /* 添加这一行 */
 }
@@ -80,21 +81,21 @@ nav.main-nav a:hover {
 .search-section {
     display: flex; /* 使用 flexbox */
     align-items: center; /* 垂直居中对齐 */
-    width: 100%; /* 宽度为 100% */
-    padding: 10px 0; /* 添加一些上下填充 */
+    width: 80%; /* 宽度为 100% */
+    padding: 15px 0; /* 添加一些上下填充 */
 }
 
 .location-input {
-    flex-grow: 1; /* 允许输入框增长 */
+    flex-grow: 2; /* 允许输入框增长 */
     border-radius: 5px;
-    padding: 10px 15px; /* 增加填充 */
+    padding: 15px 20px; /* 增加填充 */
     border: none;
-    font-size: 16px; /* 增加字体大小 */
+    font-size: 18px; /* 增加字体大小 */
 }
-
 .input-box select {
     font-size: 16px; /* 增加字体大小 */
     padding: 10px; /* 增加填充 */
+    min-width: 100px; /* 确保下拉菜单不会变得太小 */
 }
 
 .search-btn {
@@ -105,33 +106,9 @@ nav.main-nav a:hover {
 
 
 
-}
-.characters {
-    display: flex;
-    justify-content: center; /* Updated this line */
-    padding: 5px 0;
-    background-color: rgba(0, 0, 0, 0.05);
-    border-radius: 15px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap; /* Allows the content to wrap onto multiple lines */
-    max-width: 390px; /* Allows 13 characters to fit in one row */
-    margin: 10px auto 0 auto; /* Centers the container and adds a top margin */
-}
 
-.character {
-    display: flex;
-    align-items: center;
-    margin: 0 5px 10px 5px; /* Added bottom margin */
-    font-size: 14px;
-    padding: 5px 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
 
-    
-    .character:hover {
-    background-color: rgba(0, 0, 0, 0.1);
-    }
+
     
     .find-community {
     display: flex;
@@ -159,9 +136,9 @@ nav.main-nav a:hover {
     margin-top: 30px;
     }
     
-    /* ...您之前的CSS样式... */
+    
 
-/* 以下为针对 latest-activity 的样式 */
+
 .latest-activity {
     margin-top: 20px;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -213,8 +190,8 @@ nav.main-nav a:hover {
 }
 
     .activities img {
-    width: 80%;
-    max-height: px;
+    width: 60%;
+    max-height: 90%;
     object-fit: cover;
     margin: 20px 0;
     }
@@ -234,3 +211,5 @@ nav.main-nav a:hover {
     .activity-link:hover {
     background-color: rgba(0, 0, 0, 0.05);
     }
+
+    
