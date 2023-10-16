@@ -139,61 +139,85 @@ button#prev:hover, button#next:hover {
     background-color: #1565C0; /* 更深的颜色作为hover效果 */
     color: white;
 }
-
-
-
-
-
 main article {
     display: flex;
-    gap: 20px;
+    
     padding: 20px 10%;
-    margin: 40px
-    10%;
+    margin: 40px 10%;
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    main article img {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 每个文章内容块的样式 */
+.article-content {
     flex: 1;
+    width: 50%;
+    padding: 10px;
+    display: flex; /* 将内容块内部元素水平排列 */
+    flex-direction: column; /* 将内容块内部元素排成一列 */
+    box-sizing: border-box;
+   
+}
+.article-content:nth-child(2) {
+    width: 50%; /* Adjust the width */
+    padding: 10px; /* Adjust the padding */
+}
+
+/* 修改 "Author" 和 "Blog" 样式 */
+.author-name {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.blog-type {
+    color: #FF5733;
+    font-weight: normal;
+}
+
+/* 保持按钮样式不变 */
+.button-style {
+    background-color: #2196F3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    position: relative;
+    text-decoration: none;
+    transition: background-color 0.2s;
+    margin-top: 10px; /* 减小按钮与文字之间的顶部间距 */
+    width: 90px;
+}
+
+.button-style:hover {
+    background-color: #1976D2;
+}
+
+/* 图片样式 */
+main article img {
     max-height: 250px;
     object-fit: cover;
-    width: 250px;
+    width: 100%;
     border: 1px solid #000;
-    }
+}
+
+
+
+
+
     
     
-    .article-content {
-    flex: 1;
-    width: 50%; 
-    padding: 10px; 
-    }
-    .author-name {
-        font-family: 'Condiment', cursive;
-        }
+   
+   
+    
+
         
-        .blog-type {
-        font-weight: bold;
-        }
     
-    .button-style {
-        background-color: #2196F3; /* 使用图片中的颜色 */
-        color: #fff;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-weight: bold;
-        position: relative;
-        top: -10px;
-        text-decoration: none;
-        transition: background-color 0.2s;
-    }
     
-    .button-style:hover {
-        background-color: #1976D2; /* 使用稍微深一点的颜色作为hover效果 */
-    }
+  
     
+   
    
     
    
