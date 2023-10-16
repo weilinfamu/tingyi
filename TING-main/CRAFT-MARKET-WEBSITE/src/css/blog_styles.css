@@ -15,7 +15,7 @@ body {
 }
 
 header {
-    background-color: #1e1e1e;
+    background-color: #f9f9f9;
     padding: 10px 5%;
     display: flex;
     justify-content: space-between;
@@ -24,7 +24,7 @@ header {
 }
 
 header h1 {
-    color: #fff;
+    color: #1e1e1e;
     font-size: 24px;
     flex-basis: 100%;
     margin: 10px 0;
@@ -47,7 +47,7 @@ header h1 {
 .free {
     display: flex;
     margin-left: auto;
-    color: #fff;
+    color: #007BFF;
     white-space: nowrap;
     text-decoration: none;
     font-size: 16px;
@@ -61,7 +61,7 @@ nav a {
     font-size: 16px;
     font-weight: bold;
     transition: background-color 0.3s;
-    color: #fff;
+    color: #007BFF;
     background-color: transparent;
 }
 
@@ -99,10 +99,9 @@ main {
 img {
     width: 100%;  /* 设置图片宽度为45% */
     max-width: 450px;
+    height: auto;
     display: block;
-    margin-right: 5%;  /* 设置图片右边距为5% */
- 
-       
+    margin-right: 5%;  /* 设置图片右边距为5% */ 
     margin-bottom: 20px; /* 图片和文本之间的间距 */
     }
 
@@ -193,41 +192,7 @@ main article {
     
    
     
-    footer .pagination {
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
-    align-items: center;
-    }
-    
-    footer .pagination a {
-    text-decoration: none;
-    color: #007BFF;
-    padding: 5px 10px;
-    margin: 0 5px;
-    border: 1px solid #000000;
-    transition: color 0.2s, border-color 0.2s;
-    width: 18px;
-    height: 39px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    }
-    
-    footer .pagination img {
-    max-width: 100%;
-    max-height: 100%;
-    }
-    
-    footer .pagination a:hover {
-    text-decoration: none;
-    border-color: #007BFF;
-    }
-    
-    footer .pagination .active {
-    background-color: #007BFF;
-    color: #ffffff;
-    }
+   
     footer {
         background-color: #030a11;
         color: #ffffff; /* 设置默认字体颜色为白色 */

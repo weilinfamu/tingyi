@@ -1,17 +1,34 @@
-document.querySelectorAll('.filter').forEach(button => {
-    button.addEventListener('click', function() {
-        let filterValue = this.getAttribute('data-filter');
-        
-        // Here, you can use the filterValue to show/hide or adjust the content
-        // based on the selected filter. This is just a basic example, and you'd
-        // need to define what should happen for each filter type.
-        
-        if (filterValue === 'yearly') {
-            // Show/hide or adjust content for yearly
-        } else if (filterValue === 'monthly') {
-            // Show/hide or adjust content for monthly
-        } else if (filterValue === 'weekly') {
-            // Show/hide or adjust content for weekly
-        }
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter');
+    const filterButtonsContainer = document.querySelector('.filter-buttons');
+    const returnButton = document.querySelector('.return-btn');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filterValue = this.getAttribute('data-filter');
+            const sports = document.querySelectorAll('.sport');
+
+            sports.forEach(function(sport) {
+                if (filterValue === 'yearly' && sport.querySelector('figcaption').innerText === 'climbing') {
+                    sport.style.display = 'block';
+                } else if (filterValue === 'monthly' && sport.querySelector('figcaption').innerText === 'Yoga') {
+                    sport.style.display = 'block';
+                } else if (filterValue === 'weekly' && sport.querySelector('figcaption').innerText === 'Running') {
+                    sport.style.display = 'block';
+                } else {
+                    sport.style.display = 'none';
+                }
+            });
+
+            // 隐藏筛选按钮的容器并显示返回按钮
+            filterButtonsContainer.style.display = 'none';
+            returnButton.style.display = 'block';
+        });
+    });
+
+    returnButton.addEventListener('click', function() {
+        // 显示筛选按钮的容器并隐藏返回按钮
+        filterButtonsContainer.style.display = 'flex';
+        returnButton.style.display = 'none';
     });
 });

@@ -80,19 +80,6 @@
 }
 
 
-
-
-
-
-
-
-
-h1 {
-    color: darkorange;
-    font-weight: 600;
-    text-align: center;
-}
-
 .grid-container {
     display: grid;
     gap: 20px;
@@ -112,14 +99,30 @@ h1 {
     margin-top: 30px;
 }
 
+h1 {
+    color: #007BFF;
+    font-weight: 600;
+    text-align: center;}
+/* 为图片添加样式 */
+img {
+    max-width: 100%; /* 让图片在其容器内自适应宽度 */
+    height: 300px; /* 让图片的高度按比例自适应 */
+    margin-top: 20px; /* 调整图片与上方内容的间距 */
+}
+
+
+
 .join-btn {
-    display: inline-block;
+    display: block;
     padding: 10px 20px;
     background-color: #007BFF; /* Blue background */
     color: white;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
+    width: 150px;
+    margin: 10px auto;
+    text-decoration: none;
 }
 
 .join-btn:hover {
@@ -129,14 +132,23 @@ h1 {
 
 .sports-section {
     display: flex;
+    flex-direction: column; 
     justify-content: space-around;
     margin: 40px 0;
+    align-items: center;
 }
+.custom-text {
+    color: #007BFF;
+    font-weight: bold;
+    font-size: large;
+}
+
 
 .sport {
     flex: 1;
     margin: 0 15px;
     box-sizing: border-box;
+    display:none;
 }
 
 .sport img {
@@ -152,17 +164,55 @@ h1 {
     margin-top: 5px;
 }
 
+.return-btn {
+    padding: 10px 20px;
+    background-color: white;
+    color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: none; /* 默认隐藏 */
+    width: 100px; /* 设置固定宽度 */
+    height: 40px; /* 设置固定高度 */
+
+
+}
+
+.return-btn:hover {
+    background-color: #0056b3;
+}
+
 .filter-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* 保持按钮居中 */
+    
     margin-bottom: 20px;
+    padding: 10px 0;
+    justify-content: center;
 }
 
 .filter {
-    margin: 0 10px;
+    margin: 5px 10px;
     padding: 5px 15px;
     cursor: pointer;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100px; /* 设置固定宽度 */
+    height: 40px; /* 设置固定高度 */
+    display: flex; /* 使用Flexbox */
+    justify-content: center; /* 文本居中 */
+    align-items: center; /* 文本垂直居中 */
+    transition: background-color 0.3s;
 }
+
+.filter:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+
 
 .fitness-journey {
     text-align: center;
@@ -185,11 +235,12 @@ h1 {
 }
 
 
-.buttons-section {
+.buttons-section {      /* begining of footer */
     display: flex;
     justify-content: space-between;
     width: 75%;
     margin: 20px auto;
+    flex-direction: column;
 }
 
 .btn {
@@ -204,27 +255,51 @@ h1 {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
     transition: color 0.3s;
 }
+
+/* 继承第一个页面的共用样式 */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
+    background-color: #030a11;
+    color: #ffffff;
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    width: 30%;
+    flex: 0 0 30%;
+}
+
+.footer-brand h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #1976D2;
+}
+
+.footer-brand p {
+    margin-bottom: 20px;
 }
 
 .footer-links {
     display: flex;
-    justify-content: space-between;
-    padding: 0 10%;
+    width: 70%;
+    flex-wrap: wrap;
 }
 
 .footer-section {
     flex: 1;
-    padding: 0 20px;
+    min-width: 150px;
 }
 
 .footer-section h3 {
-    border-bottom: 2px solid #007BFF;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1976D2;
 }
 
 .footer-section ul {
@@ -232,34 +307,122 @@ footer {
     padding: 0;
 }
 
-.footer-section ul li {
-    margin-bottom: 10px;
+.footer-section li {
+    margin-bottom: 8px;
 }
 
-.footer-section ul li a {
+.footer-section li a {
+    color: #ffffff;
     text-decoration: none;
-    color: #fff;
-    transition: color 0.3s;
 }
 
-.footer-section ul li a:hover {
-    color: #007BFF;
+.footer-section li a:hover {
+    text-decoration: underline;
 }
 
 .footer-bottom {
-    text-align: center;
-    padding: 20px 0;
-    border-top: 1px solid #007BFF;
+    color: #ffffff;
+}
+
+/* 添加第二个页面特有的样式 */
+.flex-footer-menu {
+    background-color: #030a11;
+    color: #ffffff;
+    padding: 30px 0;
+}
+
+.buttons-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+    margin: 0;
+}
+
+.buttons-section a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.buttons-section a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30%;
+    margin-top: 20px;
+}
+
+.social-icon {
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.newsletter {
+    width: 30%;
+    margin-top: 20px;
+}
+
+.newsletter p {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.newsletter input[type="email"] {
+    padding: 8px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.newsletter button {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.newsletter button:hover {
+    background-color: #0056b3;
+}
+
+.legal {
+    width: 30%;
+    margin-top: 20px;
+}
+
+.legal p {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.legal a {
+    font-weight: bold;
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.legal a:hover {
+    color: #007BFF;
+}
+.footer-menu {
+    display: flex;
+    justify-content: space-between; /* 使三个纵列均匀分布 */
 }
 
 
 
-@media only screen and (min-width: 1195px) {
-    .flex-header-menu {
-        display: block;
-        padding: 10px 0;
-        color: #007BFF;
-        background-color: #fff;
-      
-    }
-}
+
+
