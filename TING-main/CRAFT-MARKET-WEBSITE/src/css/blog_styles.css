@@ -4,9 +4,6 @@ body, h1, h2, p, a, button {
     font-family: 'Poppins', sans-serif;
 }
 
-h1, h2 {
-    font-weight: 600;
-}
 
 body {
     background-color: #f9f9f9;
@@ -23,13 +20,20 @@ header {
     
 }
 
-header h1 {
-    color: #1e1e1e;
-    font-size: 24px;
-    flex-basis: 100%;
-    margin: 10px 0;
-    font-family: 'Georgia', serif;
-    font-weight: bold;
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100px; /* 调整图像的最大宽度 */
+}
+
+.logo-text {
+    font-size: 35px; /* 调整文字的字体大小 */
+    margin-left: 10px; /* 调整文字与图像之间的间距 */
+    font-weight: bold; /* 可选：设置文字为粗体 */
+    color:black;
 }
 
 .fixed-nav {
