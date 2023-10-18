@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header, article, footer {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+}
+
+header {
+    text-align: center;
+}
+
+article img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+article section {
+    margin-top: 20px;
+}
+
+article section h2 {
+    font-size: 24px;
+}
+
+footer {
+    text-align: center;
+}

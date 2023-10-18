@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>wellness Community </title>
+    <title>Wellness Community</title>
     <!-- linking external CSS file -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/general_styles.css">
+    <link rel="stylesheet" href="css/general_styles.css">
 </head>
 
 <body>
@@ -19,32 +19,24 @@
                 <img src="media/images/logo.png" alt="Wellness Community" class="logo">
                 <span class="logo-text">Wellness Community</span>
             </div>
-            <div class="links">
-              
-
+            <nav class="links">
+                <div class="menu-icon">☰</div>
                 <div class="page-links">
-                    <a href="wellness.html"><button class="menu-button">Wellness Activities</button></a>
-                    <a href="blog.html"><button class="menu-button">Blog</button></a>
-                    <a href="community.html"><button class="menu-button">Community</button></a>
-                    <a href="register.html"><button class="menu-button">Register/Login</button></a>
-
+                    <a href="wellness.html" class="regular-button">Wellness Activities</a>
+                    <a href="blog.html" class="regular-button">Blog</a>
+                    <a href="community.html" class="regular-button">Community</a>
+                    <a href="register.html" class="regular-button">Register/Login</a>
                 </div>
-            </div>
-            
+            </nav>
         </header>
-        <div id="search-bar">
+        <form id="search-bar" action="your_search_endpoint_here" method="get">
             <img src="media/images/amplifier.png" alt="Search" class="search-icon">
-            <input type="text" id="searchBar" placeholder="SEARCH">
-            <button id="searchButton">Search</button>
-        </div>
-            
-      
+            <input type="text" id="searchBar" placeholder="SEARCH" required>
+            <button id="searchButton" type="submit">Search</button>
+        </form>
 
-        <div class="flex-main-content main-content" aria-label="Main content">
-            <!-- Main content will go here -->
-
+        <main class="flex-main-content main-content" aria-label="Main content">
             <div class="grid-container">
-                
                 <div class="main">
                     <section class="intro-section">
                         <h1>Come and join our exercise community!</h1>
@@ -52,52 +44,37 @@
                         <img src="media/images/soccer.png" alt="Exercise Community">
                         <a href="register.html" class="join-btn">Join Now</a>
                     </section>
-                    
-                   
-                  
-                    <!-- Sports Sections -->
-                    <!-- Sports Sections -->
-                  
+
                     <div class="sports-section">
                         <span class="custom-text">Popular sports</span>
-                        <!-- Return Button -->
                         <button class="return-btn" style="display: none;">Return</button>
-                    
-                        <!-- Filter Buttons -->
                         <div class="filter-buttons">
-                            
                             <button class="filter" data-filter="yearly">YEARLY</button>
                             <button class="filter" data-filter="monthly">MONTHLY</button>
                             <button class="filter" data-filter="weekly">WEEKLY</button>
                         </div>
-
                         <figure class="sport">
                             <img src="media/images/picture1.jpg" alt="Climbing the mountain">
                             <figcaption>climbing</figcaption>
                         </figure>
-
                         <figure class="sport">
                             <img src="media/images/picture3.jpg" alt="Doing Yoga in community ">
                             <figcaption>Yoga</figcaption>
                         </figure>
-
                         <figure class="sport">
                             <img src="media/images/picture2.jpg" alt="Running with fellows">
                             <figcaption>Running</figcaption>
                         </figure>
-
                     </div>
 
                     <section class="fitness-journey">
                         <p>Connect with fellow enthusiasts and embark on a journey that's not just about fitness. Dive deep into a community where passion meets purpose, where every step, stretch, and sweat leads to not only a healthier body but also a more fulfilled life. Together, we celebrate every milestone, support each other during challenges, and push boundaries to achieve our personal best. Join us, and discover a holistic approach to well-being that goes beyond the gym.</p>
                         <a href="community.html" class="learn-more-btn">Learn More</a>
                     </section>
-                    
-
-                   
                 </div>
             </div>
-        </div>
+        </main>
+
         <footer class="flex-footer-menu footer-menu" aria-label="Main menu">
             <div class="buttons-section">
                 <a href="#link-to-community-page">Community Forum</a>
@@ -107,33 +84,24 @@
                 <a href="#link-to-privacy">Privacy Policy</a>
                 <a href="#Blog">Blog</a>
             </div>
-        
-            <!-- Social Media Links -->
             <div class="social-media">
                 <a href="#link-to-facebook" class="social-icon">Facebook</a>
                 <a href="#link-to-twitter" class="social-icon">Twitter</a>
                 <a href="#link-to-instagram" class="social-icon">Instagram</a>
             </div>
-        
-            <!-- Newsletter Signup -->
-            <div class="newsletter">
+            <form class="newsletter" action="your_newsletter_endpoint_here" method="post">
                 <p>Subscribe to our newsletter:</p>
-                <input type="email" placeholder="Your email address">
-                <button>Subscribe</button>
-            </div>
-        
-            <!-- Copyright and Legal Links -->
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
             <div class="legal">
                 <p>&copy; 2023 Wellness Inc. All rights reserved.</p>
                 <a href="#link-to-terms">Terms & Conditions</a> | <a href="#link-to-privacy">Privacy Policy</a>
             </div>
         </footer>
-        
-        
-        
     </div>
 
-    <script src="js\index_scripts.js"></script>
+    <script src="js/index_scripts.js"></script>
 </body>
 
 </html>

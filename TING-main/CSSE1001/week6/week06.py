@@ -191,3 +191,7 @@ def main():
     config = read_config('config.txt')
     print(get_value(config, 'user.mobile'))
     print(get_value(config, 'notifications.email'))
+
+
+
+    

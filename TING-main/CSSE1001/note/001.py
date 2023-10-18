@@ -1441,3 +1441,31 @@ _, _, line = line.partition(' ')
 print(line)  # Outputs: 'World from Python'
 -------------------------------------------------------------------------------------------
 .split()后，给出的是一个list
+-----------------------------------------------------------------------------------------------
+# 方法一：条件判断和2取余数为0则累加计算
+i = 1
+result = 0
+while i <= 100:
+  if i % 2 == 0:
+    result += i
+    i += 1
+
+# 输出2550
+print(result)
+
+
+i = 1
+result = 0
+while i <= 100:
+  if i % 2 == 0:
+    result += i
+  i += 1
+  -------------------------------------------------------------------------------------------
+  s is presumably a string.
+s[-3] refers to the character at the third-to-last position of the string.
+s[-1] refers to the character at the second-to-last position of the string.
+s = "HELLO"
+result = s[-3:-1]
+print(result)  # Output will be "LL"\
+No, in Python slicing, the start index is always inclusive and the stop index is always exclusive. 
+-------------------------------------------------------------------------------------------

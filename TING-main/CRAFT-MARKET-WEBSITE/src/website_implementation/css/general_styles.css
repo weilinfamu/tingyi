@@ -1,0 +1,330 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Flex Container */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.flex-header-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    max-width: 100px;
+    max-height: 70px;
+}
+
+.logo-text {
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    display: block;
+}
+.regular-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF; /* Blue background */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 5px; /* Add some margin for spacing between buttons */
+    transition: background-color 0.3s;
+}
+
+.regular-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* Search Bar Styles */
+#search-bar {
+    display: flex;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+.search-icon {
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#searchBar {
+    flex-grow: 1;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    height: 40px;
+    padding: 10px;
+}
+
+#searchButton {
+    width: auto;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    height: 60px;
+    padding: 10px 20px;
+}
+
+/* Main Content Styles */
+.grid-container {
+    display: grid;
+    gap: 20px;
+}
+
+.main {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-section {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    margin-top: 30px;
+}
+
+h1 {
+    color: #007BFF;
+    font-weight: 600;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.join-btn {
+    display: block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 150px;
+    margin: 10px auto;
+}
+
+.sports-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 40px 0;
+    align-items: center;
+}
+
+.custom-text {
+    color: #007BFF;
+    font-weight: bold;
+    font-size: large;
+}
+
+.sport {
+    flex: 1;
+    margin: 0 15px;
+    box-sizing: border-box;
+    display: none;
+}
+
+.sport img {
+    max-width: 100%;
+    height: 250px;
+    width: auto;
+    display: block;
+}
+
+.sport figcaption {
+    color: #000;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.return-btn {
+    padding: 10px 20px;
+    background-color: white;
+    color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: none;
+    width: 100px;
+    height: 40px;
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+
+.filter {
+    margin: 5px 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.filter:hover {
+    background-color: #007BFF;
+    color: white;
+}
+
+.fitness-journey {
+    text-align: center;
+    padding: 30px;
+    background-color: #eaeaea;
+}
+
+.learn-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #030a11;
+    color: #ffffff;
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-brand h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #1976D2;
+}
+
+.footer-brand p {
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    width: 70%;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #1976D2;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 8px;
+}
+
+.footer-section li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer-section li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    color: #ffffff;
+}
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    
+    .menu-icon {
+        display: block; /* Show the hamburger icon */
+    }
+    #search-bar {
+        flex-direction: column;
+    }
+    #searchBar, #searchButton {
+        width: 100%;
+        margin: 5px 0;
+    }
+    .footer-content {
+        flex-direction: column;
+    }
+    .buttons-section, .social-media, .newsletter, .legal {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    body {
+        font-size: 14px; /* Adjust as needed */
+    }
+    h1 {
+        font-size: 24px; /* Adjust as needed */
+    }
+    /* Add other elements like h2, h3, etc. if you have them */
+}
