@@ -6,8 +6,8 @@ body {
 }
 
 header {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #007BFF;
     padding: 10px 0;
     text-align: center;
 }
@@ -26,18 +26,20 @@ header p {
 nav.page-links {
     display: flex;
     justify-content: space-around;
-    background-color: #000000;
+    background-color: #ffffff;
     padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .menu-button {
-    color: #ffffff;
+    color:#007BFF;
     text-decoration: none;
     padding: 5px 15px;
     background-color: transparent;
-    border: none;
+    border-radius:5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    
 }
 
 .menu-button:hover, .menu-button.active {
@@ -108,7 +110,7 @@ button:hover {
 }
 
 footer {
-    background-color: #000000;
+    background-color: #254C6A;
     padding: 20px 0;
     color: #ffffff;
     text-align: center;

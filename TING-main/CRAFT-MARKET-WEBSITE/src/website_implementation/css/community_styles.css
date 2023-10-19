@@ -1,248 +1,230 @@
-/* General Styles */
 body {
+    background-color: #ffffff;
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    margin: 0;
-    padding: 0;
 }
 
-/* Flex Container */
-.flex-container {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Header Styles */
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px 40px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo img {
-    max-width: 100px;
-    max-height: 70px;
-}
-
-.logo-text {
-    font-size: 20px;
-    margin-left: 10px;
-    font-weight: bold;
-    color: black;
-}
-
-.navigation {
-    display: flex;
-    align-items: center;
-}
-
-.menu-icon {
-    font-size: 24px;
-    cursor: pointer;
-    display: none;
-}
-
-/* Search Bar Styles */
-.search {
-    display: flex;
-    align-items: center;
-    border: 2px solid black;
-    border-radius: 5px;
-    margin: 20px 0;
-}
-
-.search-icon {
-    height: 20px;
-    width: 20px;
-    margin-right: 5px;
-}
-
-.search-input {
-    flex-grow: 1;
-    border: none;
-    border-radius: 5px 0 0 5px;
-    height: 40px;
-    padding: 10px;
-}
-
-.search-button {
-    width: auto;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 0 5px 5px 0;
-    height: 40px;
-    padding: 10px 20px;
-}
-
-/* Main Content Styles */
-.main-content {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.intro {
-    text-align: center;
+header {
     padding: 20px;
-    background-color: #f5f5f5;
-    margin-top: 30px;
-}
-
-h1 {
-    color: #007BFF;
-    font-weight: 600;
-    text-align: center;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.join-button {
-    display: block;
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    width: 150px;
-    margin: 10px auto;
-}
-
-/* Sports Section Styles */
-.sports-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin: 40px 0;
-    align-items: center;
-}
-
-.sport {
-    flex: 1;
-    margin: 0 15px;
-    box-sizing: border-box;
-}
-
-.sport img {
-    max-width: 100%;
-    height: 250px;
-    width: auto;
-    display: block;
-}
-
-.sport figcaption {
-    color: #000;
-    font-size: 16px;
-    margin-top: 5px;
-}
-
-/* Fitness Journey Section Styles */
-.fitness-journey {
-    text-align: center;
-    padding: 30px;
-    background-color: #eaeaea;
-}
-
-/* Footer Styles */
-.footer {
-    background-color: #030a11;
-    color: #ffffff;
-    padding: 30px 0;
-}
-
-.footer-section {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px;
+    align-items: center;
     flex-wrap: wrap;
 }
 
-.footer-links {
-    color: #ffffff;
+.menu-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+nav.main-nav a {
+    margin: 0 10px;
     text-decoration: none;
-    margin-right: 15px;
+    color: #007BFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: 600;
 }
 
-.footer-links:hover {
-    text-decoration: underline;
+nav.main-nav a:hover, nav.main-nav a:focus {
+    background-color: rgba(0,0,0,0.1);
+    color: #0056b3; /* Slightly darker blue on hover/focus for better visibility */
 }
 
-.social-media {
+.user-actions a {
+    text-decoration: none;
+    color: #333;
+    background-color: rgba(0,0,0,0.1);
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.filter-program-types {
+    display: flex; /* 使其子元素横向排列 */
+    flex-wrap: wrap; /* 如果空间不足，允许子元素换行 */
+    gap: 20px; /* 子元素之间的间距 */
+    justify-content: center; /* 居中对齐 */
+}
+
+.filter-program-types .group {
     display: flex;
     align-items: center;
-    margin-right: 15px;
+    margin-bottom: 15px;
 }
 
-.social-icon {
-    color: #ffffff;
-    text-decoration: none;
+.filter-program-types img {
+    width: 40px;
     margin-right: 10px;
+    height: 40px;
+}
+.group {
+    display: inline-block; /* 修改为inline-block以使其横向排列 */
+    margin-right: 20px;
+    cursor: pointer; /* 添加这一行 */
+    transition: background-color 0.3s; /* 添加这一行 */
+}
+.group:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* 添加这一行 */
 }
 
-.social-icon:hover {
-    text-decoration: underline;
+.group.active {
+    background-color: rgba(0, 0, 0, 0.1); /* 当.group被点击时的背景色 */
+}
+.group p {
+    flex-grow: 1;
+    margin: 0;
 }
 
-.newsletter input[type="email"] {
-    padding: 8px;
-    border: 2px solid #007BFF;
+
+.search-section {
+    display: flex; /* 使用 flexbox */
+    align-items: center; /* 垂直居中对齐 */
+    width: 80%; 
+    padding: 15px 0; /* 添加一些上下填充 */
+}
+.location-icon {
+    width: 40px;
+    margin-right: 10px;
+    height: 40px;
+}
+
+.location-input {
+    flex-grow: 2; /* 允许输入框增长 */
     border-radius: 5px;
-    margin-right: 10px;
-}
-
-.newsletter button {
-    background-color: #007BFF;
-    color: #ffffff;
-    padding: 8px 16px;
+    padding: 15px 20px; /* 增加填充 */
     border: none;
+    font-size: 18px; /* 增加字体大小 */
+}
+.input-box select {
+    font-size: 16px; /* 增加字体大小 */
+    padding: 10px; /* 增加填充 */
+    min-width: 100px; /* 确保下拉菜单不会变得太小 */
+}
+
+.search-btn {
+    font-size: 16px; /* 增加字体大小 */
+    padding: 10px 20px; /* 增加填充 */
+    margin-left: 10px; /* 左边距 */
+}
+
+
+
+
+
+
+    
+    .find-community {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    }
+    
+   
+    
+    .content-container {
+        padding: 20px;
+    }
+    
+    .featured-groups {
+    width: 20%;
+    padding: 0 2%;
+    }
+    
+   
+    
+    .activities .activity-btn-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    }
+    
+    
+
+
+.latest-activity {
+    margin-top: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    cursor: pointer;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .navigation {
-        display: none;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
-    .search {
-        flex-direction: column;
-    }
-
-    .search-input, .search-button {
-        width: 100%;
-        margin: 5px 0;
-    }
-
-    .footer-section {
-        flex-direction: column;
-    }
-
-    .footer-links, .social-media {
-        margin-bottom: 20px;
-    }
+.latest-activity img {
+    width: 100%;
+    max-height: 100px;
+    max-width: 25%;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 20px;
 }
 
+.latest-activity h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
 
+.activity-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
 
+.activity-list li {
+    margin-bottom: 20px;
+}
+
+.activity-list li:last-child {
+    margin-bottom: 0;
+}
+
+.activity-list h3 {
+    font-size: 18px;
+    color: #007BFF;
+    margin-bottom: 10px;
+}
+
+.activity-list p {
+    margin: 0;
+    color: #555;
+}
+
+    .activities img {
+    width: 60%;
+    max-height: 90%;
+    object-fit: cover;
+    margin: 20px 0;
+    }
+    
+    .activity-link {
+    display: block;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+    }
+    
+    .activity-link:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    @media (max-width: 768px) {
+        nav.main-nav {
+            flex-direction: column;
+        }
+        .search-section {
+            flex-direction: column;
+        }
+    }
+    
