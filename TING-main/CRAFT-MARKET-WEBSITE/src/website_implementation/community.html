@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Forum for Wellness Community</title>
 
-    <link rel="stylesheet" href="path/to/general_styles.css">
+    <link rel="stylesheet" href="css/general_styles.css">
     <link rel="stylesheet" href="css/community_styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <div class="menu-icon">
+        <div class="menu-icon" aria-label="Menu">
             <img src="media/images/menu.png" alt="Menu Icon">
         </div>
         <nav class="main-nav">
@@ -29,9 +29,9 @@
     
     <main class="content-container">
         <section class="find-community">
-            <div class="search-section">
+            <form class="search-section">
                 <label for="location">
-                    <img src="media/images/location.jpg" alt="Location Icon">
+                    <img src="media/images/location.jpg" alt="Location Icon" class="location-icon">
                 </label>
                 <input type="text" id="location" class="location-input" placeholder="Town/Suburb">
                 <div class="input-box">

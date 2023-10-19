@@ -84,10 +84,70 @@ header {
     padding: 50px;
 
 }
+.team {
+    display: grid;
+
+    gap: 20px;
+}
+
 .team img {
     max-width: 500px; /* Adjust pixel value to your desired maximum width */
     height: auto;
 }
+/* Existing styles... */
+/* Contact Form Styles */
+#contact-form {
+    margin-top: 50px;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact-form input[type="submit"] {
+    background-color: #1E4A7B;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#contact-form input[type="submit"]:hover {
+    background-color: #007BFF;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu a {
+        margin: 10px 0;
+    }
+}
+
+
+
+
 
 
 

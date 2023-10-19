@@ -10,12 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header role="banner">
         <div class="logo-container">
             <img src="media/images/logo.png" alt="Wellness Community" class="logo">
             <span class="logo-text">Wellness Community</span>
         </div>
-        <nav class="menu">
+        <nav class="menu" role="navigation">
             <a href="website_implementation/index.html"> HOME</a>
             <a href="website_implementation/about.html" class="active">ABOUT</a>
             <a href="services.html">WELLNESS ACTIVITIES</a>
@@ -24,7 +24,7 @@
         </nav>
     </header>
     
-    <main>
+    <main role="main">
         <section class="headline">
             <h1>We provide you with the highest level of services</h1>
             <p></p>
@@ -66,6 +66,7 @@
             <!-- Testimonials -->
             <div id="testimonials">
                 <h2>What Our Members Say</h2>
+
                 <blockquote>
                     <p>"Joining this community transformed my fitness journey. Not only did I find the right resources, but I also made friends who share my passion for dance!"</p>
                     <cite>- Jane Smith, Dance Community Member</cite>
@@ -76,11 +77,22 @@
                 </blockquote>
                 <!-- Add more testimonials similarly -->
             </div>
-        
+            <div id="contact-form">
+                <h2>Contact Us</h2>
+                <form action="#" method="post">    <!--INVOLVE API-->
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </section>
         
     </main>
-    <footer>
+    <footer role="contentinfo">
         <!-- Contact Info, Social Media Icons, etc. -->
     </footer>
     <script src="js/script.js"></script>
