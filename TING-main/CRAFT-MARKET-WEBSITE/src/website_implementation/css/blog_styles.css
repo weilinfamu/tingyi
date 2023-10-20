@@ -226,7 +226,7 @@ main article {
     
    
     footer {
-        background-color: #030a11;
+        background-color: #254C6A;
         color: #ffffff; /* 设置默认字体颜色为白色 */
         padding: 30px 0;
     }
@@ -293,6 +293,13 @@ main article {
     }
     /* Responsive Design */
 @media screen and (max-width: 768px) {
+    .fixed-nav {
+        flex-direction: column;
+    }
+
+    nav {
+        display: none; /* Hide navigation on small screens */
+    }
     main article {
         width: 90vw;
         padding: 20px 5%;

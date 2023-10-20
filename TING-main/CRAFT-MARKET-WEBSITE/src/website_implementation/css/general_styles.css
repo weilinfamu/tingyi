@@ -46,11 +46,7 @@ body {
     align-items: center;
 }
 
-.menu-icon {
-    font-size: 24px;
-    cursor: pointer;
-    display: block;
-}
+
 .regular-button {
     display: inline-block;
     padding: 10px 20px;
@@ -238,7 +234,7 @@ img {
 
 /* Footer Styles */
 footer {
-    background-color: #030a11;
+    background-color: #254C6A;
     color: #ffffff;
     padding: 30px 0;
 }
@@ -302,20 +298,43 @@ footer {
 /* Responsive Styles */
 
 @media (max-width: 768px) {
-    
-    .menu-icon {
-        display: block; /* Show the hamburger icon */
-    }
-    #search-bar {
+    .flex-header-menu {
         flex-direction: column;
+
     }
-    #searchBar, #searchButton {
-        width: 100%;
-        margin: 5px 0;
+   
+    .logo-text {
+        font-size: 18px; /* adjust as needed */
     }
-    .footer-content {
-        flex-direction: column;
+    .page-links {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1px; /* Spacing between links */
     }
+    .regular-button {
+        padding: 5px 10px; /* Reduce padding */
+        font-size: 14px; /* Reduce font size */
+        margin: 2px 3px; /* Reduce margin */
+    }
+   /* Search Bar Responsiveness */
+   #search-bar {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px; /* Spacing between search elements */
+}
+#searchBar, #searchButton {
+    width: 100%;
+    margin: 5px 0;
+}
+
+   /* Footer Responsiveness */
+   .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Spacing between footer sections */
+}
+}
     .buttons-section, .social-media, .newsletter, .legal {
         width: 100%;
         margin-bottom: 20px;
@@ -327,4 +346,4 @@ footer {
         font-size: 24px; /* Adjust as needed */
     }
     /* Add other elements like h2, h3, etc. if you have them */
-}
+

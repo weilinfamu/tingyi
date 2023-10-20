@@ -42,4 +42,6 @@ document.addEventListener('DOMContentLoaded', function() {
             pageLinks.style.display = 'none';
         }
     });
-});
+
+
+   });

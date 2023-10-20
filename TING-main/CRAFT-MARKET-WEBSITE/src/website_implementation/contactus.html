@@ -15,19 +15,23 @@
 
 <body>
     <header class="brand">
-        <img src="path_to_your_logo.png" alt="Consulting Logo"> <!-- Add your logo here -->
-        CONSULTING
-        <p>Your tagline or motto goes here</p>
+        <img src="media/images/logo.png" alt="Wellness Community" class="logo">
+        <p>Promoting Wellness for a Better Life</p>
     </header>
-    <nav class="page-links">
-        <a href="#" class="menu-button">HOME PAGE</a>
-        <a href="#" class="menu-button">ABOUT US</a>
-        <a href="#" class="menu-button">BLOG</a>
-        <a href="#" class="menu-button">COMMUNITY</a>
-        <a href="#" class="menu-button active">CONTACT US</a> <!-- Highlighted active page -->
+    <div class="dropdown">
+        <button class="menu-button"  aria-label="Main Menu">MENU</button>
+        <div class="dropdown-content">
+            <a href="#" class="menu-button">HOME PAGE</a>
+            <a href="#" class="menu-button">ABOUT US</a>
+            <a href="#" class="menu-button">BLOG</a>
+            <a href="#" class="menu-button">COMMUNITY</a>
+            <a href="#" class="menu-button active">CONTACT US</a> <!-- Highlighted active page -->
+        </div>
+    </div>
+    
         <!-- Example dropdown menu -->
         <div class="dropdown">
-            <button class="dropbtn">SERVICES</button>
+            <button class="dropbtn" aria-label="Services Menu">SERVICES</button>
             <div class="dropdown-content">
                 <a href="#">Service 1</a>
                 <a href="#">Service 2</a>
@@ -47,10 +51,10 @@
             <!-- Captcha can be added here -->
             <button id="clearBtn" class="btn">Clear</button>
             <button id="sendBtn" class="btn">Send</button>
-            <p id="feedbackMessage" style="display:none;">Thank you for reaching out! We'll get back to you soon.</p>
-        </section>
+            <p id="formFeedback">Please fill out all fields before submitting.</p>
 
-        <aside class="contact-info">WW  
+
+        <aside class="contact-info">
             <h2>Contact Info</h2>
             <address>
                 <i class="fas fa-map-marker-alt"></i> Australia <br>

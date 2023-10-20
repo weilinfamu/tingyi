@@ -5,41 +5,54 @@ document.addEventListener('DOMContentLoaded', function() {
     const emailInput = document.getElementById('email');
     const messageTextarea = document.getElementById('message');
     const feedbackMessage = document.getElementById('feedbackMessage');
+    const formFeedback = document.getElementById('formFeedback');
     const clearBtn = document.getElementById('clearBtn');
     const sendBtn = document.getElementById('sendBtn');
+
+    // Newsletter elements
+    const newsletterInput = document.querySelector('footer input[type="email"]');
+    const newsletterBtn = document.querySelector('footer button');
+    const newsletterFeedback = document.getElementById('newsletterFeedback');
+
+    function clearContactForm() {
+        nameInput.value = '';
+        emailInput.value = '';
+        messageTextarea.value = '';
+    }
+
+    function submitContactForm() {
+        if (nameInput.value && emailInput.value && messageTextarea.value) {
+            feedbackMessage.style.display = 'block';
+            clearContactForm();
+        } else {
+            formFeedback.style.display = 'block';
+        }
+    }
+
+    function submitNewsletter() {
+        if (newsletterInput.value) {
+            alert('Thank you for subscribing to our newsletter!');
+            newsletterInput.value = '';
+        } else {
+            newsletterFeedback.style.display = 'block';
+        }
+    }
 
     // Clear form fields
     clearBtn.addEventListener('click', function(e) {
         e.preventDefault();
-        nameInput.value = '';
-        emailInput.value = '';
-        messageTextarea.value = '';
+        clearContactForm();
     });
 
     // Form submission feedback
     sendBtn.addEventListener('click', function(e) {
         e.preventDefault();
-        if (nameInput.value && emailInput.value && messageTextarea.value) {
-            feedbackMessage.style.display = 'block';
-            nameInput.value = '';
-            emailInput.value = '';
-            messageTextarea.value = '';
-        } else {
-            alert('Please fill out all fields before submitting.');
-        }
+        submitContactForm();
     });
 
     // Newsletter Signup
-    const newsletterInput = document.querySelector('footer input[type="email"]');
-    const newsletterBtn = document.querySelector('footer button');
-
     newsletterBtn.addEventListener('click', function(e) {
         e.preventDefault();
-        if (newsletterInput.value) {
-            alert('Thank you for subscribing to our newsletter!');
-            newsletterInput.value = '';
-        } else {
-            alert('Please enter a valid email address.');
-        }
+        submitNewsletter();
     });
 });
