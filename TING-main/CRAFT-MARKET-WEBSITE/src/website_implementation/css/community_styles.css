@@ -1,8 +1,15 @@
+/* Resetting some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: #ffffff;
     font-family: 'Poppins', sans-serif;
 }
 
+/* Header styles */
 header {
     padding: 20px;
     background-color: #fff;
@@ -12,11 +19,22 @@ header {
     align-items: center;
     flex-wrap: wrap;
 }
-
-.menu-icon img {
-    width: 24px;
-    height: 24px;
+/* Hide the side menu by default */
+.flex-side-menu {
+    display: none;
 }
+
+/* Show the side menu when it has the 'visible' class */
+.flex-side-menu.visible {
+    display: block;
+}
+
+/* Style for the active link */
+.nav-link.active {
+    background-color: #007BFF;
+    color: white;
+}
+
 
 nav.main-nav a {
     margin: 0 10px;
@@ -30,7 +48,7 @@ nav.main-nav a {
 
 nav.main-nav a:hover, nav.main-nav a:focus {
     background-color: rgba(0,0,0,0.1);
-    color: #0056b3; /* Slightly darker blue on hover/focus for better visibility */
+    color: #0056b3;
 }
 
 .user-actions a {
@@ -43,188 +61,215 @@ nav.main-nav a:hover, nav.main-nav a:focus {
     font-weight: bold;
 }
 
-.filter-program-types {
-    display: flex; /* 使其子元素横向排列 */
-    flex-wrap: wrap; /* 如果空间不足，允许子元素换行 */
-    gap: 20px; /* 子元素之间的间距 */
-    justify-content: center; /* 居中对齐 */
-}
-
-.filter-program-types .group {
+/* Aside styles */
+aside a {
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    transition: background-color 0.3s;
 }
 
-.filter-program-types img {
-    width: 40px;
+aside a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+aside img {
+    width: 24px;
+    height: 24px;
     margin-right: 10px;
-    height: 40px;
-}
-.group {
-    display: inline-block; /* 修改为inline-block以使其横向排列 */
-    margin-right: 20px;
-    cursor: pointer; /* 添加这一行 */
-    transition: background-color 0.3s; /* 添加这一行 */
-}
-.group:hover {
-    background-color: rgba(0, 0, 0, 0.05); /* 添加这一行 */
 }
 
-.group.active {
-    background-color: rgba(0, 0, 0, 0.1); /* 当.group被点击时的背景色 */
+/* Main content styles */
+main {
+    padding: 20px;
 }
-.group p {
-    flex-grow: 1;
-    margin: 0;
-}
-
 
 .search-section {
-    display: flex; /* 使用 flexbox */
-    align-items: center; /* 垂直居中对齐 */
-    width: 80%; 
-    padding: 15px 0; /* 添加一些上下填充 */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
 }
+
+.location-icon, .location-input, .input-box select, .search-btn {
+    margin-right: 10px;
+}
+
 .location-icon {
     width: 40px;
-    margin-right: 10px;
     height: 40px;
 }
 
 .location-input {
-    flex-grow: 2; /* 允许输入框增长 */
+    flex-grow: 2;
     border-radius: 5px;
-    padding: 15px 20px; /* 增加填充 */
-    border: none;
-    font-size: 18px; /* 增加字体大小 */
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 18px;
 }
+
 .input-box select {
-    font-size: 16px; /* 增加字体大小 */
-    padding: 10px; /* 增加填充 */
-    min-width: 100px; /* 确保下拉菜单不会变得太小 */
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
 }
 
 .search-btn {
-    font-size: 16px; /* 增加字体大小 */
-    padding: 10px 20px; /* 增加填充 */
-    margin-left: 10px; /* 左边距 */
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-
-
-
-
-
+.search-btn:hover {
+    background-color: #0056b3;
+}
+.filter-container {
     
-    .find-community {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    margin-top: 40px;
-    }
-    
-   
-    
-    .content-container {
-        padding: 20px;
-    }
-    
-    .featured-groups {
-    width: 20%;
-    padding: 0 2%;
-    }
-    
-   
-    
-    .activities .activity-btn-container {
+    color:#007BFF;
+}
+
+.row-grid{
     display: flex;
-    justify-content: center;
-    margin-top: 30px;
-    }
+    flex-wrap: wrap;
     
-    
+}
 
 
-.latest-activity {
-    margin-top: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+.group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 20%;
 }
 
-.latest-activity img {
-    width: 100%;
-    max-height: 100px;
-    max-width: 25%;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 20px;
+.group:hover {
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
-.latest-activity h2 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #333;
+.group img {
+    width: 40px;
+    height: 40px;
 }
 
-.activity-list {
-    list-style-type: none;
-    padding: 0;
+.group p {
     margin: 0;
 }
 
-.activity-list li {
+/* Form styles */
+form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+form .form-group {
     margin-bottom: 20px;
 }
 
-.activity-list li:last-child {
-    margin-bottom: 0;
-}
-
-.activity-list h3 {
-    font-size: 18px;
-    color: #007BFF;
+form label {
+    display: block;
     margin-bottom: 10px;
 }
 
-.activity-list p {
-    margin: 0;
-    color: #555;
+form input[type="text"], form textarea, form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-    .activities img {
-    width: 60%;
-    max-height: 90%;
-    object-fit: cover;
-    margin: 20px 0;
-    }
-    
-    .activity-link {
-    display: block;
-    background-color: #fff;
-    padding: 15px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 20px;
-    text-align: center;
-    }
-    
-    .activity-link:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-    }
+form input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-    @media (max-width: 768px) {
-        nav.main-nav {
-            flex-direction: column;
-        }
-        .search-section {
-            flex-direction: column;
-        }
-    }
+form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.col-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
     
+}
+
+/* Medium screens */
+@media (min-width: 768px) {
+    .col-md-8 {
+        flex: 0 0 66.66667%;
+        max-width: 66.66667%;
+    }
+}
+
+/* Large screens */
+@media (min-width: 992px) {
+    .col-lg-9 {
+        flex: 0 0 75%;
+        max-width: 75%;
+    }
+}
+
+/* Image positioning */
+.image-container {
+    display: flex;
+    justify-content: flex-end; /* Aligns the image to the right */
+    align-items: flex-end; /* Aligns the image to the bottom */
+    height: 100vh; /* Takes the full height of the viewport */
+}
+
+.image-container img {
+    max-width: 100%; /* Ensures the image doesn't exceed its container's width */
+    height: auto; /* Retains the image's aspect ratio */
+}
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #007BFF;
+}
+
+footer img {
+    margin-right: 10px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    nav.main-nav, .search-section {
+        flex-direction: column;
+    }
+}

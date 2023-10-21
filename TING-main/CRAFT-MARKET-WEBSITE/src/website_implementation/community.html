@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,13 +11,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
+    <!-- flatpickr date picker -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
 </head>
+
 <body>
     <header>
-        <div class="menu-icon" aria-label="Menu">
-            <img src="media/images/menu.png" alt="Menu Icon">
+           
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav" role="navigation">
             <a href="#">TOPICS</a>
             <a href="#">RESOURCES</a>
             <a href="#">PROFESSIONAL</a>
@@ -26,8 +31,28 @@
             <a href="#">New to the community? REGISTER</a>
         </div>
     </header>
-    
-    <main class="content-container">
+
+    <aside class="flex-side-menu side-menu" aria-label="Main menu">
+        <button id="toggleNavButton">Toggle Navigation</button>
+        <a href="index.html" class="nav-link" aria-label="navigation page" aria-current="page">
+            <img src="media/icons8-home.png" alt="home">
+            <span>nevigation page</span>
+        </a>
+        <a href="designs.html" class="nav-link" aria-label="blog page">
+            <img src="media/icons8-projects.png" alt="design">
+            <span>blog</span>
+        </a>
+        <a href="#.html" class="nav-link" aria-label="Demonstrations">
+            <img src="media/icons8-demo.png" alt="demo">
+            <span>contactus</span>
+        </a>
+        <a href="#.html" class="nav-link" aria-label="Aboutis">
+            <img src="media/icons8-about.png" alt="about">
+            <span>Aboutus</span>
+        </a>
+    </aside>
+
+    <main class="flex-main-container">
         <section class="find-community">
             <form class="search-section">
                 <label for="location">
@@ -35,7 +60,7 @@
                 </label>
                 <input type="text" id="location" class="location-input" placeholder="Town/Suburb">
                 <div class="input-box">
-                    <label for="distance" hidden>Distance</label>
+                    <label for="distance">Distance:</label>
                     <select id="distance">
                         <option value="5">5km</option>
                         <option value="10">10km</option>
@@ -46,13 +71,11 @@
                         <option value="200">200km</option>
                     </select>
                 </div>
-                <button class="search-btn">Search Programs</button>
-             
-                
-            </div>
+                <button class="search-btn">Search</button>
+            </form>
         </section>
 
-        <section class="filter-program-types">
+        <div class="filter-container">
             <h2>Filter Program Types</h2>
             <div class="group" data-activity="football">
                 <img src="media/images/football.png" alt="Football Icon">
@@ -90,26 +113,90 @@
                 <img src="media/images/climbing.png" alt="Climbing Icon">
                 <p>Climbing</p>
             </div>
-        </section>
-        
-
-        </section>
-
-        
-
-        <section class="activities">
-            <div class="activity-btn-container">
-                <a href="#" class="activity-link">The latest activity in your place</a>
+        </div>
+        <div>
+            <section class="latest-activity" id="latestActivity"></section>
+        </div>
+        <div class="row-grid">
+            <div class="col-12 col-md-4 col-lg-6">
+                <form action="http://your_server_address/api/community_events/" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="name">Event Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" name="location" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="organizer">Organizer:</label>
+                        <input type="text" id="organizer" name="organizer" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Event Type:</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="event_type" id="workshop" value="Workshop" required>
+                            <label class="form-check-label" for="workshop">Workshop</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="event_type" id="seminar" value="Seminar" required>
+                            <label class="form-check-label" for="seminar">Seminar</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="event_type" id="groupActivity" value="Group Activity" required>
+                            <label class="form-check-label" for="groupActivity">Group Activity</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="event_type" id="webinar" value="Webinar" required>
+                            <label class="form-check-label" for="webinar">Webinar</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" rows="4" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="date_time">Date and Time:</label>
+                        <input type="text" id="date_time" name="date_time" placeholder="e.g. 2023-05-31 14:30" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="photo" id="photo-file-input-label" class="p-1">Add a photo (optional)</label>
+                        <input type="file" name="photo" id="photo-file-input" accept="image/*" capture="camera">
+                        <span id="selected-file-name"></span>
+                    </div>
+                    <div>
+                        <input class="btn btn-primary" type="submit" value="Submit Event">
+                    </div>
+                </form>
             </div>
-            <!-- 添加的 latest-activity 部分开始 -->
-            <section class="latest-activity" id="latestActivity">
-                
-                
-            </section>
-            <img src="media/images/picture6.jpg" alt="Community Photo">
-            
-        </section>
+
+            <div class="col-12 col-md-8 col-lg-6 image-container">
+                <img src="media/images/picture6.jpg" alt="Community Photo" class="positioned-image">
+            </div>
+        </div>
     </main>
+
+    <footer class="flex-footer-menu footer-menu" aria-label="Main menu">
+        <a href="index.html" class="nav-link" aria-label="Home page" aria-current="page">
+            <img src="media/icons8-home.png" alt="home">
+            <span>Home</span>
+        </a>
+        <a href="designs.html" class="nav-link" aria-label="Design projects">
+            <img src="media/icons8-projects.png" alt="design">
+            <span>Designs</span>
+        </a>
+        <a href="demos.html" class="nav-link" aria-label="Demonstrations">
+            <img src="media/icons8-demo.png" alt="demo">
+            <span>Demos</span>
+        </a>
+        <a href="about_me.html" class="nav-link" aria-label="About Pete">
+            <img src="media/icons8-about.png" alt="about">
+            <span>About Pete</span>
+        </a>
+    </footer>
+
     <script src="js/community_scripts.js"></script>
+    <script src="js/community_api.js"></script>
 </body>
+
 </html>
