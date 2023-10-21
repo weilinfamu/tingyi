@@ -1,3 +1,23 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // 1. Toggle Visibility
+    const toggleNavButton = document.getElementById('toggleNavButton');
+    const sideMenu = document.querySelector('.flex-side-menu');
+
+    toggleNavButton.addEventListener('click', function() {
+        sideMenu.classList.toggle('visible');
+    });
+
+    // 2. Highlight Active Link
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.forEach(innerLink => innerLink.classList.remove('active'));
+            link.classList.add('active');
+        });
+    });
+});
+
 // Sample data for activities
 const activityData = {
     
