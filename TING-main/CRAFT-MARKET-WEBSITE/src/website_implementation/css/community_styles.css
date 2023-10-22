@@ -133,7 +133,7 @@ main {
     align-items: center;
     color:#007BFF;
     display: flex; /* Updated to flex for horizontal alignment */
-    align-items: center;
+    
     justify-content: space-between; /* Added to separate content and image */
 }
 
@@ -345,6 +345,6 @@ form input[type="submit"]:hover {
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
     nav.main-nav, .search-section {
-        flex-direction: column;
+        flex-direction: row;
     }
 }

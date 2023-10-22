@@ -1,0 +1,73 @@
+body {
+    font-family: 'Comfortaa', cursive;
+    background-image: url('https://source.unsplash.com/featured/?fitness,community,wellness');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2, h3 {
+    margin-top: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s;
+
+    /* On focus, change border color to blue */
+    &:focus {
+        border-color: blue;
+    }
+}
+
+.captcha {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    /* On hover, slightly darken the button background */
+    &:hover {
+        background-color: #0056b3;
+    }
+}

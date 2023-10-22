@@ -6,7 +6,7 @@ body, h1, h2, p, a, button {
 
 body {
     background-color: #f9f9f9;
-
+    color: #333;
     line-height: 1.5;
 }
 
@@ -21,6 +21,7 @@ header {
 .logo-container {
     display: flex;
     align-items: center;
+    gap: 10px;
 }
 
 .logo {
@@ -31,7 +32,7 @@ header {
     font-size: 35px;
     margin-left: 10px;
     font-weight: bold;
-    color: black;
+    color: #007BFF;  /* 修改为蓝色以保持一致 */
 }
 
 .fixed-nav {
@@ -46,13 +47,16 @@ header {
     align-items: center;
 }
 
-.free {
+a, .free {
     margin-left: auto;
     color: #007BFF;
     white-space: nowrap;
     text-decoration: none;
     font-size: 16px;
     font-weight: bold;
+}
+a:hover, .free:hover {
+    color: #0056b3;  /* 调深了hover的颜色 */
 }
 
 nav a {
@@ -153,8 +157,12 @@ main article {
     align-items: center;  /* Center children horizontally */
     width: 100%;
     padding: 20px 0;
+    border: 1px solid #e0e0e0;  /* 增加了一条边框 */
 }
 
+.article-content h3 {
+    color: #007BFF;  /* 文章标题颜色为蓝色 */
+}
 .text-content {
     display: flex;
     flex-direction: column;
@@ -203,28 +211,10 @@ main article {
 }
 
 .button-style:hover {
-    background-color: #1976D2;
+    background-color: #0056b3;  /* 调深了hover的颜色 */
 }
 
 
-
-
-
-    
-    
-   
-   
-    
-
-        
-    
-    
-  
-    
-   
-   
-    
-   
     footer {
         background-color: #254C6A;
         color: #ffffff; /* 设置默认字体颜色为白色 */
@@ -236,6 +226,7 @@ main article {
         justify-content: space-between;
         margin-bottom: 20px;
         flex-wrap: wrap;
+        color: #007BFF;
     }
     
     .footer-brand {
@@ -356,9 +347,7 @@ button {
     gap: 10px;
 }
 
-.logo-container {
-    gap: 10px;
-}
+
 
 .carousel {
     gap: 20px;
