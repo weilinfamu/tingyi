@@ -14,7 +14,7 @@
     <!-- flatpickr date picker -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
+    
 </head>
 
 <body>
@@ -73,10 +73,30 @@
                 </div>
                 <button class="search-btn">Search</button>
             </form>
+            <section class="strength-exercises">
+                <h2>Strength Exercises</h2>
+                <div class="strength-content">
+                    <div class="strength-why">
+                        <h3>WHY</h3>
+                        <p>Improves mobility and independence. Helps us do what we want in life. Getting up from a chair with ease, going up and down stairs, and walking outside with confidence all require good strength.</p>
+                    </div>
+                    <div class="strength-how">
+                        <h3>HOW</h3>
+                        <p>Standing up and sitting down several times in a row, or going up and down an extra flight of stairs can help. Some people use leg and arm weights to improve strength at a gym or at home.</p>
+                    </div>
+                    <div class="strength-when">
+                        <h3>WHEN</h3>
+                        <p>Aim to do strengthening exercises 2-3 times per week.</p>
+                    </div>
+                </div>
+            </section>
         </section>
 
         <div class="filter-container">
             <h2>Filter Program Types</h2>
+            <!-- New image element -->
+            <img src="path_to_your_image.jpg" alt="Descriptive Alt Text" id="filter-image">
+          
             <div class="group" data-activity="football">
                 <img src="media/images/football.png" alt="Football Icon">
                 <p>Football (Soccer)</p>
@@ -175,27 +195,52 @@
             </div>
         </div>
     </main>
+    <footer>
 
-    <footer class="flex-footer-menu footer-menu" aria-label="Main menu">
-        <a href="index.html" class="nav-link" aria-label="Home page" aria-current="page">
-            <img src="media/icons8-home.png" alt="home">
-            <span>Home</span>
-        </a>
-        <a href="designs.html" class="nav-link" aria-label="Design projects">
-            <img src="media/icons8-projects.png" alt="design">
-            <span>Designs</span>
-        </a>
-        <a href="demos.html" class="nav-link" aria-label="Demonstrations">
-            <img src="media/icons8-demo.png" alt="demo">
-            <span>Demos</span>
-        </a>
-        <a href="about_me.html" class="nav-link" aria-label="About Pete">
-            <img src="media/icons8-about.png" alt="about">
-            <span>About Pete</span>
-        </a>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h2>Community Forum</h2>
+                <p>Join our growing community of X members and Y active discussions. Share knowledge, seek advice, and interact with like-minded individuals.</p>
+                <!-- Social media icons here, you can replace them with your own links -->
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>Community</h3>
+                    <ul>
+                        <li><a href="#">About Our Community</a></li>
+                        <li><a href="#">Join Discussions</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Popular Topics</h3>
+                    <ul>
+                        <li><a href="#">Healthy Living</a></li>
+                        <li><a href="#">Work-Life Balance</a></li>
+                        <li><a href="#">Mental Health</a></li>
+                        <!-- ... and other links -->
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Wellness Resources</a></li>
+                        <li><a href="#">Professional Support</a></li>
+                        <!-- ... and other links -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Community Forum — Uniting for Wellness. All rights reserved.</p>
+        </div>
     </footer>
-
-    <script src="js/community_scripts.js"></script>
+    
+    
     <script src="js/community_api.js"></script>
 </body>
 

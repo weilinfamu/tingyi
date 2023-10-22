@@ -132,7 +132,46 @@ main {
     
     align-items: center;
     color:#007BFF;
+    display: flex; /* Updated to flex for horizontal alignment */
+    align-items: center;
+    justify-content: space-between; /* Added to separate content and image */
 }
+
+
+.strength-exercises {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.strength-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.strength-why, .strength-how, .strength-when {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.strength-why h3, .strength-how h3, .strength-when h3 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .strength-content {
+        flex-direction: column;
+    }
+}
+
 
 .row-grid{
     display: flex;
@@ -174,6 +213,24 @@ form {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 800px;
     margin: 20px auto;
+}
+form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    background-color: #007BFF; /* Updated background color to blue */
+    margin: 10px;
+    padding: 20px; /* Added padding */
+    color: #fff; /* Updated text color to white for better readability */
+    border-radius: 10px; /* Added border radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 form .form-group {
@@ -240,32 +297,50 @@ form input[type="submit"]:hover {
     max-width: 100%; /* Ensures the image doesn't exceed its container's width */
     height: auto; /* Retains the image's aspect ratio */
 }
-/* Footer styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.footer-content,
+.footer-bottom {
+    padding: 20px;
+    background-color: #2c3e50;
+    color: #ecf0f1;
 }
 
-footer a {
-    color: #fff;
+.footer-brand,
+.footer-links,
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-brand h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section li a {
+    color: #ecf0f1;
     text-decoration: none;
-    margin: 0 10px;
-    display: flex;
-    align-items: center;
-    transition: color 0.3s;
 }
 
-footer a:hover {
-    color: #007BFF;
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #34495e;
+    margin-top: 20px;
 }
 
-footer img {
-    margin-right: 10px;
-}
 
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
