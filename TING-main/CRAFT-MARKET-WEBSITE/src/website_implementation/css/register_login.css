@@ -1,6 +1,6 @@
 body {
     font-family: 'Comfortaa', cursive;
-    background-image: url('https://source.unsplash.com/featured/?fitness,community,wellness');
+    background-image: url("../media/images/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -12,6 +12,38 @@ body {
     height: 100vh;
 }
 
+.text-section {
+    /* 你可以在这里添加你想要的样式 */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7); /* 例如，给它一个半透明的白色背景 */
+    border-radius: 5px; /* 圆角 */
+    margin-bottom: 20px; /* 下边距 */
+}
+
+.text-section h1 {
+    /* 为标题添加样式 */
+    color: #333; /* 字体颜色 */
+    margin-top: 20px; /* 上边距 */
+  
+    margin-left: 5vw; /* 左边距 */
+}
+.text-section h3{
+    color: #333; /* 字体颜色 */
+    margin-top: 20px; /* 上边距 */
+
+}
+.text-section p {
+    /* 为段落添加样式 */
+    font-size: 16px; /* 字体大小 */
+    line-height: 1.5; /* 行高 */
+    margin-bottom: 15px; /* 下边距 */
+}
+
+.text-section a {
+    /* 为链接添加样式 */
+    color: #007BFF; /* 蓝色 */
+    text-decoration: underline; /* 下划线 */
+}
 .container {
     width: 80%;
     max-width: 600px;
@@ -19,10 +51,20 @@ body {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    position: relative; /* Added for positioning the logo */
 }
 
-h1, h2, h3 {
-    margin-top: 20px;
+.logo-section {
+    position: absolute; /* Absolute positioning */
+    top: 10px; /* Position from the top */
+    left: 10px; /* Position from the left */
+}
+
+.logo-section-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #fff;
 }
 
 form {
@@ -40,11 +82,13 @@ input[type="tel"] {
     border-radius: 5px;
     outline: none;
     transition: border 0.3s;
+}
 
-    /* On focus, change border color to blue */
-    &:focus {
-        border-color: blue;
-    }
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus {
+    border-color: blue;
 }
 
 .captcha {
@@ -58,16 +102,27 @@ input[type="checkbox"] {
 }
 
 button {
-    padding: 10px 20px;
-    background-color: blue;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    background-color: lightblue; /* Light blue background */
+    border: none; /* Remove default border */
+    padding: 10px 15px; /* Padding for button */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Hand cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+    margin-top: 2%;
+}
 
-    /* On hover, slightly darken the button background */
-    &:hover {
-        background-color: #0056b3;
+button:hover {
+    background-color: #b3d4fc; /* Slightly darker blue on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Increase width for smaller screens */
+    }
+
+    .logo-section-img {
+        width: 80px; /* Slightly smaller logo */
+        height: 80px;
     }
 }

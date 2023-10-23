@@ -34,7 +34,7 @@ flatpickr("#date_time", {
 });
 // 定义常量
 const baseURL = "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community_events/";
-const my_website_code = 'Pete123';
+const my_website_code = 'RickysWebsite';
 const queryParams = {
     website_code: my_website_code,
 };
@@ -46,7 +46,8 @@ const requestOptionsGET = {
     redirect: 'follow'
 };
 
-// 使用GET请求获取之前POST的事件
+// ... 其他代码保持不变 ...
+
 function getPostedEvents() {
     fetch(urlWithParams, requestOptionsGET)
         .then(response => {
@@ -57,6 +58,12 @@ function getPostedEvents() {
         })
         .then(events => {
             console.log(events);
+
+            // 如果事件列表为空，显示一个消息并退出函数
+            if (!events.length) {
+                alert("No events found.");
+                return;
+            }
 
             // 清空事件容器
             while (eventsContainer.firstChild) {
