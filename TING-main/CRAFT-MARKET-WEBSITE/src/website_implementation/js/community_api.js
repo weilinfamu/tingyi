@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // Ensure elements exist before accessing them
     const eventForm = document.getElementById('eventForm');
     /**
-     * Get the events container element by its ID.
+   
+     * Gets the toggle form button element by its ID.
      * @type {HTMLElement}
      */
     const toggleFormButton = document.getElementById('toggleFormButton');
