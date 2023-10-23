@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration for Wellness Activity</title>
+    <link rel="stylesheet" href="css/register_login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo-section">
+            <img src="media/images/logo.png" alt="Wellness Activity Community Logo" class="logo-section-img" >
+        </div>
+        <div class="text-section">
+            <h1>Wellness Activity</h1>
+            <p>If you are interested in participating in community-driven wellness activities, please <a href="#">click here</a>.</p>
+        
+          
+            <h3>Join as an Activity Coordinator on the Wellness and Community Website</h3>
+        </div>
+        
+       
+        <form action="#" method="POST">
+            <input type="text" name="first-name" placeholder="First Name" required>
+            <input type="text" name="surname" placeholder="Surname" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="text" name="position" placeholder="Position" required>
+            <input type="tel" name="phone" placeholder="Phone" required>
+            <label for="favoriteSport" aria-label="Favorite Sport">Favorite Sport</label>
+            <input type="text" id="favoriteSport" name="favoriteSport">
+            <div class="captcha">
+                <input type="checkbox" id="captcha" name="captcha" required>
+                <label for="captcha">I'm not a robot</label>
+            </div>
+            <div>
+                <input type="checkbox" id="terms" name="terms" aria-label="Terms and Conditions" required>
+                <label for="terms">I agree to the Terms and Conditions</label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="register_login.css_scripts.js"></script>
+</body>
+
+</html>

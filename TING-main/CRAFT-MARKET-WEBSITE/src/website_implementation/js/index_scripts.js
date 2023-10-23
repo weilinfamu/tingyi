@@ -42,6 +42,13 @@ document.addEventListener('DOMContentLoaded', function() {
             pageLinks.style.display = 'none';
         }
     });
+    document.querySelector(".back-to-top").addEventListener("click", function() {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+    
     window.onscroll = function() {
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
             document.querySelector(".back-to-top").style.display = "block";

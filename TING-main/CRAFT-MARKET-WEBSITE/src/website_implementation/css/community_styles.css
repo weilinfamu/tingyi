@@ -1,12 +1,14 @@
 /* Resetting some default styles */
-body, h1, h2, h3, p {
+body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
+    margin-bottom: 15px;
 }
 
 body {
-    background-color: #ffffff;
+    background-color: #f4f4f4; 
     font-family: 'Poppins', sans-serif;
+    height: 100%;
 }
 
 /* Header styles */
@@ -19,6 +21,7 @@ header {
     align-items: center;
     flex-wrap: wrap;
 }
+
 /* Hide the side menu by default */
 .flex-side-menu {
     display: none;
@@ -35,7 +38,6 @@ header {
     color: white;
 }
 
-
 nav.main-nav a {
     margin: 0 10px;
     text-decoration: none;
@@ -47,8 +49,8 @@ nav.main-nav a {
 }
 
 nav.main-nav a:hover, nav.main-nav a:focus {
-    background-color: rgba(0,0,0,0.1);
-    color: #0056b3;
+    background-color: #0056b3;
+    color: #fff;
 }
 
 .user-actions a {
@@ -61,39 +63,19 @@ nav.main-nav a:hover, nav.main-nav a:focus {
     font-weight: bold;
 }
 
-/* Aside styles */
-aside a {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #333;
-    padding: 10px;
-    transition: background-color 0.3s;
-}
 
-aside a:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-aside img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-}
 
 /* Main content styles */
 main {
     padding: 20px;
-}
-
-.search-section {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
+    justify-content: center;
+    height: 100%; /* Take the full height of its parent */
 }
 
-.location-icon, .location-input, .input-box select, .search-btn {
+.location-icon, .location-input, .input-box select{
     margin-right: 10px;
 }
 
@@ -102,41 +84,12 @@ main {
     height: 40px;
 }
 
-.location-input {
-    flex-grow: 2;
-    border-radius: 5px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    font-size: 18px;
-}
-
-.input-box select {
-    font-size: 16px;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-.search-btn {
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.search-btn:hover {
-    background-color: #0056b3;
-}
 .filter-container {
-    
     align-items: center;
-    color:#007BFF;
-    display: flex; /* Updated to flex for horizontal alignment */
-    
-    justify-content: space-between; /* Added to separate content and image */
+    color: #007BFF;
+    display: flex;
+    justify-content: space-between;
 }
-
 
 .strength-exercises {
     background-color: #f9f9f9;
@@ -172,89 +125,77 @@ main {
     }
 }
 
-
-.row-grid{
+.events-section {
     display: flex;
-    flex-wrap: wrap;
-    
+    flex-direction: row;
+    gap: 20px; /* Optional: Adds some space between the elements */
 }
 
-
-.group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    width: 20%;
+#toggleFormButton {
+    flex-basis: 150px; /* Set a fixed width */
 }
 
-.group:hover {
-    background-color: rgba(0, 0, 0, 0.05);
+#eventsContainer {
+    flex-grow: 1; /* Allow it to take up the remaining space */
 }
 
-.group img {
-    width: 40px;
-    height: 40px;
-}
-
-.group p {
-    margin: 0;
-}
-
-/* Form styles */
-form {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin: 20px auto;
-}
-form .form-group {
-    display: flex;
-    flex-direction: column;
+#eventForm {
+    display: none; /* Hide the form by default */
 }
 
 .card {
-    background-color: #007BFF; /* Updated background color to blue */
+    background-color: #007BFF;
     margin: 10px;
-    padding: 20px; /* Added padding */
-    color: #fff; /* Updated text color to white for better readability */
-    border-radius: 10px; /* Added border radius */
+    padding: 20px;
+    color: #fff;
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 500px;
+    
+    margin-left: auto;
 }
+
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-form .form-group {
-    margin-bottom: 20px;
+/* Form container */
+form {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-form label {
-    display: block;
-    margin-bottom: 10px;
-}
-
-form input[type="text"], form textarea, form select {
+/* Input fields and textarea */
+form input[type="text"],
+form textarea,
+form select {
     width: 100%;
-    padding: 10px;
+    padding: 10px 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
 }
 
+form input[type="text"]:focus,
+form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit button */
 form input[type="submit"] {
     background-color: #007BFF;
     color: #fff;
     border: none;
     padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -263,40 +204,52 @@ form input[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-.col-6 {
-    flex: 0 0 100%;
-    max-width: 100%;
-    
+#eventForm {
+    display: none;
 }
 
-/* Medium screens */
-@media (min-width: 768px) {
-    .col-md-8 {
-        flex: 0 0 66.66667%;
-        max-width: 66.66667%;
-    }
+#eventForm.visible {
+    display: block;
 }
 
-/* Large screens */
-@media (min-width: 992px) {
-    .col-lg-9 {
-        flex: 0 0 75%;
-        max-width: 75%;
-    }
+/* Button Styles */
+#toggleFormButton {
+    background-color: #2c3e50;
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 10px 20px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline-block */
+    font-size: 16px; /* Change font size */
+    margin: 4px 2px; /* Some margin */
+    cursor: pointer; /* Pointer/hand icon on hover */
+    border-radius: 12px; /* Rounded corners */
+    transition-duration: 0.4s; /* Transition effects */
+    max-width: 70px;
+    max-height: 70px;
+}
+
+#toggleFormButton:hover {
+    background-color: white; /* White background on hover */
+    color: #4CAF50; /* Green text on hover */
 }
 
 /* Image positioning */
 .image-container {
     display: flex;
-    justify-content: flex-end; /* Aligns the image to the right */
-    align-items: flex-end; /* Aligns the image to the bottom */
-    height: 100vh; /* Takes the full height of the viewport */
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 100vh;
+    transition: filter 0.3s;
 }
 
 .image-container img {
-    max-width: 100%; /* Ensures the image doesn't exceed its container's width */
-    height: auto; /* Retains the image's aspect ratio */
+    max-width: 100%;
+    height: auto;
+    filter: blur(0);
 }
+
 .footer-content,
 .footer-bottom {
     padding: 20px;
@@ -341,10 +294,3 @@ form input[type="submit"]:hover {
     margin-top: 20px;
 }
 
-
-/* Media queries for responsiveness */
-@media (max-width: 768px) {
-    nav.main-nav, .search-section {
-        flex-direction: row;
-    }
-}
