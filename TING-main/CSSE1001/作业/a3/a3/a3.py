@@ -140,9 +140,11 @@ class FancySokobanView(tk.Frame):
 
           "load the banner image and display it"
 
-          self.banner_image = tk.PhotoImage(file="banner.png")
+          self.banner_image = get_image("images/banner.png", (MAZE_SIZE + SHOP_WIDTH, BANNER_HEIGHT),)
+
+          
           self.banner = tk.Label(self,image=self.banner_image)
-          self.banner.pack()
+          self.banner.pack(fill=tk.BOTH, expand=True)
 
           "instantiating and packing the three widgets"
           self.game_view = FancyGameView(self,dimensions,size)
