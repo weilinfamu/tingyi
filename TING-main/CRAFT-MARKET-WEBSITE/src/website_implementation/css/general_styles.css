@@ -5,17 +5,17 @@ body {
     line-height: 1.5;
     background: linear-gradient(to bottom, #b3cde0, white);
     color: #333;
-    margin: 0;
-    padding: 0;
+    margin: 0;     /* Removes the margin around the body element */
+    padding: 0;     /* Removes the padding around the body element */
 }
 body::before {
-    content: "";
-    position: absolute;
+    content: "";    /* Creates a pseudo element */
+    position: absolute;   /* Sets the position to absolute */
     width: 100px;
     height: 100px;
     border-radius: 50%;
     background: linear-gradient(to bottom, #b3cde0, white);
-    z-index: -1;
+    z-index: -1;    /* Elements with a higher z-index value are displayed on top of elements with a lower z-index value. A*/
     top: 10%;
     left: 10%;
 }

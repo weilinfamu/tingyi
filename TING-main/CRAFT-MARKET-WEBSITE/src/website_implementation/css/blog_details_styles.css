@@ -1,13 +1,13 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
+    margin: 0;       /* Removes the margin around the body element */
+    padding: 0;      /* Removes the padding around the body element */
     background-color: #f4f4f4;
 }
 
 header, article, footer {
-    margin: 20px;
+    margin: 20px;    /* Adds margin around the header, article, and footer elements */
     padding: 20px;
     background-color: #fff;
 }
@@ -17,7 +17,7 @@ header {
 }
 
 article img {
-    max-width: 100%;
+    max-width: 100%;    /* Adds margin around the header, article, and footer elements */
     height: auto;
     display: block;
     margin: 0 auto;

@@ -14,13 +14,16 @@
 
 <body>
     <div class="flex-container">
+         <!-- Header Section -->
         <header class="flex-header-menu header-menu" aria-label="Main menu">
             <div class="logo-container">
-                <img src="media/images/logo.png" alt="Wellness Community" class="logo">
+                  <!-- Logo Image and Text -->
+                <img src="media/logo.png" alt="Wellness Community" class="logo">
                 <span class="logo-text">Wellness Community</span>
             </div>
             <nav class="links">
                 <div class="page-links">
+                      <!-- Navigation Links -->
                     <a href="wellness.html" class="regular-button">Wellness Activities</a>
                     <a href="blog.html" class="regular-button">Blog</a>
                     <a href="community.html" class="regular-button">Community</a>
@@ -28,22 +31,24 @@
                 </div>
             </nav>
         </header>
-        <form id="search-bar" action="your_search_endpoint_here" method="get">
-            <img src="media/images/amplifier.png" alt="Search" class="search-icon">
+        <form id="search-bar" action="search endpoint" method="get"> 
+            <!-- Search Bar Form -->
+            <img src="media/amplifier.png" alt="Search" class="search-icon">
             <input type="text" id="searchBar" placeholder="SEARCH" required>
             <button id="searchButton" type="submit">Search</button>
         </form>
-
+        <!-- Main Content Section -->
         <main class="flex-main-content main-content" aria-label="Main content">
             <div class="grid-container">
                 <div class="main">
+                    <!-- Introduction Section -->
                     <section class="intro-section">
                         <h1>Come and join our exercise community!</h1>
-                        <p>Discover a variety of workouts, connect with fitness enthusiasts, and achieve your health goals together.</p>
-                        <img src="media/images/soccer.png" alt="Exercise Community">
+                        <p>Discover a variety of workouts, connect with fitness enthusiasts, and achieve  health goals together.</p>
+                        <img src="media/soccer.png" alt="Exercise Community">
                         <a href="register.html" class="join-btn">Join Now</a>
                     </section>
-
+                    <!-- Sports Section -->
                     <div class="sports-section">
                         <span class="custom-text">Popular sports</span>
                         <button class="return-btn" style="display: none;">Return</button>
@@ -53,30 +58,31 @@
                             <button class="filter" data-filter="weekly">WEEKLY</button>
                         </div>
                         <figure class="sport">
-                            <img src="media/images/picture1.jpg" alt="Climbing the mountain">
+                            <img src="media/picture1.jpg" alt="Climbing the mountain">
                             <figcaption>climbing</figcaption>
                         </figure>
                         <figure class="sport">
-                            <img src="media/images/picture3.jpg" alt="Doing Yoga in community ">
+                            <img src="media/picture3.jpg" alt="Doing Yoga in community ">
                             <figcaption>Yoga</figcaption>
                         </figure>
                         <figure class="sport">
-                            <img src="media/images/picture2.jpg" alt="Running with fellows">
+                            <img src="media/picture2.jpg" alt="Running with fellows">
                             <figcaption>Running</figcaption>
                         </figure>
                     </div>
 
                     <section class="fitness-journey">
-                        <h2>Your Fitness Journey</h2>
+                        <h2> Fitness Journey</h2>
                         <p>Connect with fellow enthusiasts and embark on a journey that's not just about fitness. Dive deep into a community where passion meets purpose, where every step, stretch, and sweat leads to not only a healthier body but also a more fulfilled life. Together, we celebrate every milestone, support each other during challenges, and push boundaries to achieve our personal best. Join us, and discover a holistic approach to well-being that goes beyond the gym.</p>
                         <a href="community.html" class="learn-more-btn">Learn More</a>
                     </section>
                 </div>
             </div>
         </main>
-
+         <!-- Footer Section -->
         <footer class="flex-footer-menu footer-menu" aria-label="Main menu">
             <div class="buttons-section">
+                     <!-- Footer Links -->
                 <a href="#link-to-community-page">Community Forum</a>
                 <a href="#link-to-about-us">About Us</a>
                 <a href="#link-to-contact-us">Contact Us</a>
@@ -88,11 +94,12 @@
                 <a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
                 <a href="www.linkedin.com/in"><i class="fab fa-linkedin-in"></i></a>
             </div>
-            <form class="newsletter" action="your_newsletter_endpoint_here" method="post">
+            <form class="newsletter" action="newsletter_endpoint" method="post">
                 <p>Subscribe to our newsletter:</p>
-                <input type="email" placeholder="Your email address" required>
+                <input type="email" placeholder=" email address" required>
                 <button type="submit">Subscribe</button>
             </form>
+             <!-- Legal Section -->
             <div class="legal">
                 <p>&copy; 2023 Wellness Inc. All rights reserved.</p>
                 <a href="#link-to-terms">Terms & Conditions</a> | <a href="#link-to-privacy">Privacy Policy</a>

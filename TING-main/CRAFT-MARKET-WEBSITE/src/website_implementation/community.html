@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Forum for Wellness Community</title>
 
+    <!-- Linking to general and community-specific stylesheets -->
     <link rel="stylesheet" href="css/general_styles.css">
     <link rel="stylesheet" href="css/community_styles.css">
+
+     <!-- Preconnecting to Google Fonts for faster loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Linking to the Poppins font family from Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
     <!-- flatpickr date picker -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -17,14 +22,17 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="media/images/logo.png" alt="Wellness Community" class="logo">
+              <!-- Logo image for the Wellness Community -->
+            <img src="media/logo.png" alt="Wellness Community" class="logo">
             <span class="logo-text">Wellness Community</span>
         </div>
+           <!-- Main navigation menu -->
         <nav class="main-nav" role="navigation">
             <a href="blog.html">Blogs</a>
             <a href="blogcontent.html">RESOURCES</a>
             <a href="about.html">PROFESSIONAL</a>
         </nav>
+           <!-- Main navigation menu -->
         <div class="user-actions">
             <a href="register.html">New to the community? REGISTER</a>
         </div>
@@ -52,39 +60,39 @@
         <h2>Filter Program Types</h2>
       
         <div class="group" data-activity="football">
-            <img src="media/images/football.png" alt="Football Icon">
+            <img src="media/football.png" alt="Football Icon">
             <p>Football (Soccer)</p>
         </div>
         <div class="group" data-activity="basketball">
-            <img src="media/images/basketball.png" alt="Basketball Icon">
+            <img src="media/basketball.png" alt="Basketball Icon">
             <p>Basketball</p>
         </div>
         <div class="group" data-activity="tennis">
-            <img src="media/images/tennis.jpg" alt="Tennis Icon">
+            <img src="media/tennis.jpg" alt="Tennis Icon">
             <p>Tennis</p>
         </div>
         <div class="group" data-activity="golf">
-            <img src="media/images/golf.png" alt="Golf Icon">
+            <img src="media/golf.png" alt="Golf Icon">
             <p>Golf</p>
         </div>
         <div class="group" data-activity="cycling">
-            <img src="media/images/cycling.png" alt="Cycling Icon">
+            <img src="media/cycling.png" alt="Cycling Icon">
             <p>Cycling</p>
         </div>
         <div class="group" data-activity="extremeSports">
-            <img src="media/images/extreme_sports.png" alt="Extreme Sports Icon">
+            <img src="media/extreme_sports.png" alt="Extreme Sports Icon">
             <p>Extreme Sports</p>
         </div>
         <div class="group" data-activity="running">
-            <img src="media/images/running.png" alt="Running Icon">
+            <img src="media/running.png" alt="Running Icon">
             <p>Running</p>
         </div>
         <div class="group" data-activity="yoga">
-            <img src="media/images/yoga.png" alt="Yoga Icon">
+            <img src="media/yoga.png" alt="Yoga Icon">
             <p>Yoga</p>
         </div>
         <div class="group" data-activity="climbing">
-            <img src="media/images/climbing.png" alt="Climbing Icon">
+            <img src="media/climbing.png" alt="Climbing Icon">
             <p>Climbing</p>
         </div>
     </div>
@@ -94,7 +102,7 @@
     
     <div class="events-section">
         <button id="toggleFormButton">Toggle Event Form</button>
-        
+           <!-- Event Submission Form  -->
         <form action="http://your_server_address/api/community_events/" method="post" enctype="multipart/form-data" id="eventForm">
         <div class="form-group">
             <label for="name">Event Name:</label>
@@ -108,6 +116,7 @@
             <label for="organizer">Organizer:</label>
             <input type="text" id="organizer" name="organizer" required aria-label="Event Organizer">
         </div>
+         <!-- Event Type Radio Button Group -->
         <div class="form-group">
             <label>Event Type:</label>
             <div class="form-check">
@@ -127,30 +136,37 @@
                 <label class="form-check-label" for="webinar">Webinar</label>
             </div>
         </div>
+          <!-- Event Description Textarea Group -->
         <div class="form-group">
             <label for="description">Description:</label>
             <textarea id="description" name="description" rows="4" required aria-label="Event Description"></textarea>
         </div>
+          <!-- Event Description Textarea Group -->
         <div class="form-group">
             <label for="date_time">Date and Time:</label>
             <input type="text" id="date_time" name="date_time" placeholder="e.g. 2023-05-31 14:30" required aria-label="Event Date and Time">
         </div>
+          <!-- Event Description Textarea Group -->
         <div class="form-group">
             <label for="photo" id="photo-file-input-label" class="p-1">Add a photo (optional)</label>
             <input type="file" name="photo" id="photo-file-input" accept="image/*" capture="camera" aria-label="Add Event Photo">
             <span id="selected-file-name"></span>
         </div>
+          <!-- Submit Event Button -->
         <div>
             <input class="btn btn-primary" type="submit" value="Submit Event" aria-label="Submit Event Button">
         </div>
         </form>
+        <!-- Container for displaying events -->
         <div id="eventsContainer"></div>
     </div>
-
+    <!-- Image Container with a Community Photo -->
     <div class="image-container">
-        <img src="media/images/picture6.jpg" alt="Community Photo" class="positioned-image" aria-label="Community Photo">
+          <!-- Community Photo sourced from pexels.com -->
+        <img src="media/picture6.jpg" alt="Community Photo" class="positioned-image" aria-label="Community Photo">
     </div>
 </main>
+<!-- Footer Section -->
 <footer>
     <div class="footer-content">
         <div class="footer-brand">
@@ -177,7 +193,7 @@
                     <li><a href="#">Healthy Living</a></li>
                     <li><a href="#">Work-Life Balance</a></li>
                     <li><a href="blogcontent.html">Mental Health</a></li>
-                    <!-- ... and other links -->
+                    
                 </ul>
             </div>
             <div class="footer-section">
@@ -185,7 +201,7 @@
                 <ul>
                     <li><a href="#">Wellness Resources</a></li>
                     <li><a href="about.html">Professional Support</a></li>
-                    <!-- ... and other links -->
+                    
                 </ul>
             </div>
         </div>

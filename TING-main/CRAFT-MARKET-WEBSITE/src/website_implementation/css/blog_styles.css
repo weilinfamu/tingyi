@@ -3,7 +3,7 @@ body, h1, h2, p, a, button {
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
-
+/* General body styles */
 body {
     background-color: #f9f9f9;
     color: #333;
@@ -21,7 +21,7 @@ header {
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px;              /* Creates spacing between child elements */
 }
 
 .logo {
@@ -32,9 +32,10 @@ header {
     font-size: 35px;
     margin-left: 10px;
     font-weight: bold;
-    color: #007BFF;  /* 修改为蓝色以保持一致 */
+    color: #007BFF;  /* Changed to blue for consistency */
 }
 
+/* Styles for navigation that is fixed */
 .fixed-nav {
     display: flex;
     justify-content: space-between;
@@ -46,7 +47,7 @@ header {
     display: flex;
     align-items: center;
 }
-
+/* Styles for anchor tags and free class */
 a, .free {
     margin-left: auto;
     color: #007BFF;
@@ -56,7 +57,7 @@ a, .free {
     font-weight: bold;
 }
 a:hover, .free:hover {
-    color: #0056b3;  /* 调深了hover的颜色 */
+    color: #0056b3;  
 }
 
 nav a {
@@ -95,21 +96,21 @@ main {
     justify-content: space-between;
     align-items: center;
     transition: all 0.5s;
-    flex-direction: column;
+    flex-direction: column;      /*added to center the content vertically */
 }
 
 img {
     width: 100%;
     max-width: 450px;
-    height: auto;
+    height: auto;               /* added to ensure the image is responsive */
     display: block;
     margin-right: 5%;
-    margin-bottom: 20px;
+    margin-bottom: 20px;       /* added to create spacing between the image and text */
 }
 
 p {
     width: 45%;
-    color: rgb(14, 14, 15);
+    color: rgb(14, 14, 15);    /* changed to black for better readability */
     text-align: center;
 }
 
@@ -157,18 +158,18 @@ main article {
     align-items: center;  /* Center children horizontally */
     width: 100%;
     padding: 20px 0;
-    border: 1px solid #e0e0e0;  /* 增加了一条边框 */
+    border: 1px solid #e0e0e0;  /* Added to create a border around the content */
 }
 
 .article-content h3 {
-    color: #007BFF;  /* 文章标题颜色为蓝色 */
+    color: #007BFF;    /* Changed to blue for consistency */
 }
 .text-content {
     display: flex;
     flex-direction: column;
-    align-items: center; /* centers the content horizontally */
-    justify-content: center; /* centers the content vertically */
-    height: 100%; /* this will fill the parent's height, adjust if needed */
+    align-items: center;           /* centers the content horizontally */
+    justify-content: center;      /* centers the content vertically */
+    height: 100%;                 /* this will fill the parent's height, adjust if needed */
   }
   
 .article-content img {
@@ -211,13 +212,13 @@ main article {
 }
 
 .button-style:hover {
-    background-color: #0056b3;  /* 调深了hover的颜色 */
+    background-color: #0056b3;   /* Changed to blue for consistency */
 }
 
 
     footer {
-        background-color: #254C6A;
-        color: #ffffff; /* 设置默认字体颜色为白色 */
+        background-color: #254C6A;    
+        color: #ffffff; 
         padding: 30px 0;
     }
     
@@ -237,7 +238,7 @@ main article {
     .footer-brand h2 {
         font-size: 28px;
         margin-bottom: 10px;
-        color: #1976D2; /* 设置加粗的标题颜色为蓝色 */
+        color: #1976D2;    /* set the title color to blue */
     }
     
     .footer-brand p {
@@ -258,7 +259,7 @@ main article {
     .footer-section h3 {
         font-size: 20px;
         margin-bottom: 10px;
-        color: #1976D2; /* 设置加粗的子标题颜色为蓝色 */
+        color: #1976D2; 
     }
     
     .footer-section ul {
@@ -271,16 +272,16 @@ main article {
     }
     
     .footer-section li a {
-        color: #ffffff; /* 确保链接颜色是白色 */
-        text-decoration: none; /* 可以移除下划线 */
+        color: #ffffff; 
+        text-decoration: none;
     }
     
     .footer-section li a:hover {
-        text-decoration: underline; /* 当鼠标悬停时显示下划线 */
+        text-decoration: underline; 
     }
     
     .footer-bottom {
-        color: #ffffff; /* 确保底部文字颜色是白色 */
+        color: #ffffff; 
     }
     /* Responsive Design */
 @media screen and (max-width: 768px) {

@@ -5,21 +5,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contact Us</title>
+    <!-- Include Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600&display=swap" rel="stylesheet">
+    <!-- Include css styles -->
     <link rel="stylesheet" href="css/contactus_styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
+    <!-- Header Section -->
     <header class="brand">
-        <img src="media/images/logo.png" alt="Wellness Community" class="logo">
+        <img src="media/logo.png" alt="Wellness Community" class="logo">
         <p>Promoting Wellness for a Better Life</p>
+        <!-- Navigation Menu -->
         <nav>
+            <!-- Main Menu Dropdown -->
             <div class="dropdown">
                 <button class="menu-button" aria-label="Main Menu">MENU</button>
                 <div class="dropdown-content">
+                    <!-- Navigation Links -->
                     <a href="index.html" class="menu-button">HOME PAGE</a>
                     <a href="about.html" class="menu-button">ABOUT US</a>
                     <a href="blog.html" class="menu-button">BLOG</a>
@@ -27,9 +33,11 @@
                     <a href="contactus.html" class="menu-button active">CONTACT US</a>
                 </div>
             </div>
+              <!-- Services Dropdown -->
             <div class="dropdown">
                 <button class="dropbtn" aria-label="Services Menu">SERVICES</button>
                 <div class="dropdown-content">
+                    <!-- Service-related Links -->
                     <a href="#">know more about us</a>
                     <a href="#">service details</a>
                     <a href="#">our purpose</a>
@@ -37,9 +45,10 @@
             </div>
         </nav>
     </header>
-
+      <!-- Main Content Section -->
     <main class="grid-container">
         <section class="contact-form-section">
+             <!-- Form Inputs -->
             <h2 class="contact-form-title">Contact Form</h2>
             <label class="contact-form-label" for="name">Name:</label>
             <input class="contact-form-input" type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -47,11 +56,12 @@
             <input class="contact-form-input" type="email" id="email" name="email" placeholder="Enter your email" required>
             <label class="contact-form-label" for="message">Message:</label>
             <textarea class="contact-form-textarea" id="message" name="message" placeholder="Enter your message" required></textarea>
+             <!-- Form Buttons and Feedback -->
             <button id="clearBtn" class="btn">Clear</button>
             <button id="sendBtn" class="btn">Send</button>
             <p id="formFeedback" class="form-feedback">Please fill out all fields before submitting.</p>
         </section>
-
+        <!-- Contact Info Section -->
         <section class="contact-info">
             <h2>Contact Info</h2>
             <address>
@@ -67,7 +77,7 @@
             <p>Office Hours: 9am - 5pm (Mon - Fri)</p>
         </section>
     </main>
-
+    <!-- Footer Section -->
     <footer>
         <div class="footer-contact-form">
             <h5>CONTACT FORM:</h5>
@@ -84,7 +94,7 @@
             <button>Subscribe</button>
         </div>
     </footer>
-
+       <!-- Include JavaScript -->
     <script src="js/contactus_scripts.js"></script>
 </body>
 
