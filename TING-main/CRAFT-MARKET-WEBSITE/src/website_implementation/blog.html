@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Community Blog for Wellness</title>
      <!-- Linking to general and blog-specific stylesheets -->
-    <link rel="stylesheet" href="css/general_styles.css">
+   
     <link rel="stylesheet" href="css/blog_styles.css">
 
      <!-- Preconnecting to Google Fonts for faster loading -->
@@ -25,7 +25,7 @@
         <div class="fixed-nav">
             <div class="logo-container">
                  <!-- Logo image for the Wellness Community -->
-                <img src="media/images/logo.png" alt="Wellness Community" class="logo">
+                <img src="media/logo.png" alt="Wellness Community" class="logo">
                 <span class="logo-text">Wellness Community</span>
             </div>
              <!-- Main navigation -->
@@ -33,7 +33,7 @@
                 <a href="index.html" aria-label="Navigate to Home page">Home</a>
                 <a href="about.html" aria-label="Navigate to About page">About</a>
                 <a href="resources.html" aria-label="Navigate to Resources page">Resources</a>
-                <a href="jobs.html" aria-label="Navigate to Jobs page" class="free">free join</a>
+                <a href="register.html" aria-label="Navigate to register page" class="free">free join</a>
             </nav>
                 
         </div>
@@ -45,12 +45,12 @@
         <!-- HTML structure for the carousel -->
         <div class="carousel">
     <div class="slide">
-          <!-- ALL imageS sourced from pexels.com -->
-        <img src="media/images/wellness.png" alt="Man writing on a notebook with a pen, symbolizing the opportunity to earn money by writing" aria-label="Man writing symbolizing earning opportunities">
+          <!-- ALL sourced from pexels.com -->
+        <img src="media/wellness.png" alt="Man writing on a notebook with a pen, symbolizing the opportunity to earn money by writing" aria-label="Man writing symbolizing earning opportunities">
         <p>Earn money by writing from anywhere. We welcome writers of all skill levels.</p>
     </div>
     <div class="slide">
-        <img src="media/images/make money.png" alt="Illustration of a hand holding a smartphone with coins and bills emerging from the screen, symbolizing earning money through mobile devices" aria-label="Earning money using a smartphone illustration">
+        <img src="media/make money.png" alt="Illustration of a hand holding a smartphone with coins and bills emerging from the screen, symbolizing earning money through mobile devices" aria-label="Earning money using a smartphone illustration">
         <p>Easily earn money using any device.</p>
     </div>
 </div>
@@ -59,13 +59,13 @@
         </div>
          <!-- Navigation buttons for the carousel -->
         <div class="buttons-container">
-            <button id="prev">Previous</button>
-            <button id="next">Next</button>
+            <button id="prev" type="button">Previous</button>
+            <button id="next" type="button">Next</button>
         </div>
             <!-- Individual blog articles section -->
         <article>
             <div class="article-content">
-                <img src="media/images/picture5.jpg" alt="Group silhouette">
+                <img src="media/picture5.jpg" alt="Group silhouette">
                    <!-- ...article content... -->
                 <h3>Overcoming Mental Barriers.</h3>
                 <p class="author-name">Author: Sarah Johnson</p>
@@ -77,40 +77,40 @@
              <!-- ...other articles... -->
         <article>
             <div class="article-content">
-                <img src="media/images/picture4.jpg" alt="Running posture">
+                <img src="media/picture4.jpg" alt="Running posture">
                 <div class="text-content">
                     <h3>Maintaining Proper Running Posture.</h3>
                     <p class="author-name">Author: Emily Parker</p>
                     <p class="blog-type">Blog: sports postures</p>
                     <p>Keeping proper gestures while doing sports.</p>
                 </div>
-                <a href="#" class="button-style">Read More</a>
+                <a href="blogcontent.html" class="button-style">Read More</a>
             </div>
         </article>
         
         <article>
             <div class="article-content">
-                <img src="media/images/other yoga.png" alt="Yoga pose">
+                <img src="media/other yoga.png" alt="Yoga pose">
                 <div class="text-content">
                     <h3>Mastering Yoga Poses for Wellness.</h3>
                     <p class="author-name">Author: Jonathan Smith</p>
                     <p class="blog-type">Blog: wellness and flexibility</p>
                     <p>Understanding the art and science behind each yoga asana.</p>
                 </div>
-                <a href="#" class="button-style">Read More</a>
+                <a href="blogcontent.html" class="button-style">Read More</a>
             </div>
         </article>
         
         <article>
             <div class="article-content">
-                <img src="media/images/nutrition.png" alt="Healthy diet">
+                <img src="media/nutrition.png" alt="Healthy diet">
                 <div class="text-content">
                     <h3>Advantages of Balanced Diet</h3>
                     <p class="author-name">Author: Sarah Lee</p>
                     <p class="blog-type">Blog: nutritional wellness</p>
                     <p>Navigating the world of nutrition for optimal health.</p>
                 </div>
-                <a href="#" class="button-style">Read More</a>
+                <a href="blogcontent.html" class="button-style">Read More</a>
             </div>
         </article>
         
@@ -122,9 +122,9 @@
                 <h2>Community Blog</h2>
                 <p>With over X subscribers and Y readers, Community Blog is one of the world's largest websites dedicated to wellness.</p>
                 <!-- Social media icons here, you can replace them with your own links -->
-                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/login"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.facebook.com/" aria-label="Visit Facebook page"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/home" aria-label="Visit Twitter page"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/login" aria-label="Visit LinkedIn page"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <div class="footer-links">
                 <div class="footer-section">
@@ -148,8 +148,8 @@
                 <div class="footer-section">
                     <h3>Learn</h3>
                     <ul>
-                        <li><a href="#">Keeping health</a></li>
-                        <li><a href="#">Our Professional</a></li>
+                        <li><a href="community.html">Keeping health from exercise</a></li>
+                        <li><a href="about.html">Our team_member</a></li>
                         <!-- ... and other links -->
                     </ul>
                 </div>

@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container"> 
          <!-- Logo Section -->
         <div class="logo-section">
              <!-- Logo Image  from pexels.com-->
@@ -29,17 +29,16 @@
         
         <!-- Registration Form -->
         <form action="#" method="POST">
-            <!-- Input fields for user details -->
-            <input type="text" name="first-name" placeholder="First Name" required>
-            <input type="text" name="surname" placeholder="Surname" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="text" name="position" placeholder="Position" required>
-            <input type="tel" name="phone" placeholder="Phone" required>
-
-              <!-- Label and Input for Favorite Sport -->
+            <input type="text" name="first-name" placeholder="First Name" autocomplete="given-name" required>
+            <input type="text" name="surname" placeholder="Surname" autocomplete="family-name" required>
+            <input type="email" name="email" placeholder="Email" autocomplete="email" required>
+            <input type="password" name="password" placeholder="Password" autocomplete="new-password" required>
+            <input type="text" name="position" placeholder="Position" autocomplete="organization-title" required>
+            <input type="tel" name="phone" placeholder="Phone" autocomplete="tel" required>
+        
+            <!-- Label and Input for Favorite Sport -->
             <label for="favoriteSport" aria-label="Favorite Sport">Favorite Sport</label>
-            <input type="text" id="favoriteSport" name="favoriteSport">
+            <input type="text" id="favoriteSport" name="favoriteSport" autocomplete="off"> <!-- Assuming favorite sport is unique for each user -->
 
              <!-- Captcha Checkbox -->
             <div class="captcha">
@@ -55,7 +54,7 @@
         </form>
     </div>
       <!-- Link to external JavaScript file -->
-    <script src="register_login.scripts.js"></script>
+    <script src="js/register_login.scripts.js"></script>
 </body>
 
 </html>

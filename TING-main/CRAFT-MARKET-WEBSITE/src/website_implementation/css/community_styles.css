@@ -63,8 +63,6 @@ nav.main-nav a:hover, nav.main-nav a:focus {
     font-weight: bold;
 }
 
-
-
 /* Main content styles */
 main {
     padding: 20px;
@@ -293,4 +291,3 @@ form input[type="submit"]:hover {
     border-top: 1px solid #34495e;
     margin-top: 20px;
 }
-

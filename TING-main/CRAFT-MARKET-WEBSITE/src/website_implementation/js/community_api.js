@@ -1,18 +1,16 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Ensure elements exist before accessing them
+    // Access the form element to handle event submissions
     const eventForm = document.getElementById('eventForm');
-    /**
-   
-     * Gets the toggle form button element by its ID.
-     * @type {HTMLElement}
-     */
+   // Access the button that toggles the visibility of the event form
     const toggleFormButton = document.getElementById('toggleFormButton');
-
+      // Only add the click event listener if both the button and form are present in the DOM
     if (toggleFormButton && eventForm) {
         toggleFormButton.addEventListener('click', function() {
             eventForm.classList.toggle('visible');
         });
     }
+
+        // Container where the fetched events will be displayed
     const eventsContainer = document.getElementById('eventsContainer');
 
     if (eventForm) {
@@ -23,34 +21,41 @@ document.addEventListener("DOMContentLoaded", function() {
             const formData = new FormData(eventForm);
             formData.set('website_code', my_website_code);  
             formData.set('organiser', eventForm.organizer.value);
+
+            
+            // Collect form data to send to the server
             const requestOptionsPOST = {
                 method: 'POST',
                 body: formData,
                 redirect: 'follow'
             };
-
+            // Send the form data to the server and handle the response
             fetch(baseURL, requestOptionsPOST)
                 .then(response => response.json())
                 .then(data => {
                     if (data.id) {
+                         // Notify the user of successful event posting
                         alert('Event successfully posted!');
                         getPostedEvents();
                     } else {
+                        // Handle any errors returned from the server
                         alert('Error posting event: ' + JSON.stringify(data));
                     }
                 })
                 .catch(error => {
+                    // Handle any network or other errors during the fetch
                     console.error('Error:', error);
                     alert('There was an error posting the event. Please try again.');
                 });
         });
     }
-
+     // Initialize the date-time picker for better user experience
     flatpickr("#date_time", {
         enableTime: true,
         dateFormat: "Y-m-d H:i",
     });
 
+     // Base URL for the API and website-specific code for filtering events
     const baseURL = "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community_events/";
     const my_website_code = 'RickysWebsite';
     const queryParams = {
@@ -59,22 +64,27 @@ document.addEventListener("DOMContentLoaded", function() {
     const queryString = new URLSearchParams(queryParams).toString();
     const urlWithParams = baseURL + "?" + queryString;
 
+     // Define the request options for the GET request
     const requestOptionsGET = {
         method: 'GET',
         redirect: 'follow'
     };
 
+     // Fetch and display events posted for this website
     function getPostedEvents() {
         fetch(urlWithParams, requestOptionsGET)
             .then(response => {
+                
                 if (!response.ok) {
+                    // Handle non-200 responses
                     throw new Error(`Network response was not ok. Status: ${response.status} ${response.statusText}`);
                 }
                 return response.json();
             })
             .then(events => {
                 console.log('Received events:', events);
-    
+                
+                 // Process and display the fetched events
                 if (!events || !events.length) {
                     alert("No events found.");
                     return;
@@ -91,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <p><strong>Date & Time:</strong> ${new Date(event.date_time).toLocaleString()}</p>
                     `;
                 }
-
+                  // Clear the events container and populate it with the fetched events
                 if (eventsContainer) {
                     while (eventsContainer.firstChild) {
                         eventsContainer.removeChild(eventsContainer.firstChild);
@@ -118,10 +128,11 @@ document.addEventListener("DOMContentLoaded", function() {
             })
                 
             .catch(error => {
+                 // Handle any errors during the fetch or processing of events
             console.error("Error processing events:", error);
             alert(`There was a problem loading events: ${error.message}. Please refresh the page to try again.`);
         });
 }
-
+    // Fetch and display events posted for this website
     getPostedEvents();
 });

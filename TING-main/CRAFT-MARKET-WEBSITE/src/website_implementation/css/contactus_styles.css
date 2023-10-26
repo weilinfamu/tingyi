@@ -169,3 +169,39 @@ button {
 button:hover {
     background-color: #333333;
 }
+/* ... [您现有的CSS] ... */
+
+/* Responsive Design for Tablets and Mobiles */
+@media screen and (max-width: 768px) {
+    /* Stack grid items on top of each other */
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Adjust font sizes for better readability */
+    header p, .contact-form-title {
+        font-size: 1.2em;
+    }
+
+    /* Adjust padding and margins for better spacing */
+    header, .contact-form-section, .contact-info {
+        padding: 10px;
+    }
+
+    /* Adjust input and button sizes for touch-friendliness */
+    .contact-form-input, .contact-form-textarea, footer input[type="email"], button {
+        padding: 12px;
+    }
+
+    button {
+        padding: 8px 20px;
+    }
+}
+
+/* Responsive Design for Mobiles */
+@media screen and (max-width: 480px) {
+    /* Adjust font sizes for mobile screens */
+    header p, .contact-form-title {
+        font-size: 1em;
+    }
+}

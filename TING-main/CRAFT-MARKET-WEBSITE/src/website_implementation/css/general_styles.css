@@ -101,13 +101,13 @@ body::after {
 
 
 
-/* Search Bar Styles */
+                                        /* Search Bar Styles */
 #search-bar {
-    display: flex;
-    align-items: center;
+    display: flex;                     
+    align-items: center;            /* Aligns items vertically */
     border: 2px solid black;
     border-radius: 5px;
-    margin: 20px 0;
+    margin: 20px 0;               /* Adds some margin to the top and bottom */
 }
 
 .search-icon {
@@ -164,15 +164,13 @@ h1 {
 }
 
 img {
-    
-    
     max-width: 100%;
     height: auto;
 }
 
 .join-btn {
     display: block;
-    padding: 10px 20px;
+    padding: 10px 20px;                     /* Adds some padding to the button */
     background-color: #007BFF;
     color: white;
     text-decoration: none;
@@ -184,7 +182,7 @@ img {
 
 .sports-section {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;             /* Aligns items vertically */
     justify-content: space-around;
     margin: 40px 0;
     align-items: center;
@@ -199,7 +197,7 @@ img {
 .sport {
     flex: 1;
     margin: 0 15px;
-    box-sizing: border-box;
+    box-sizing: border-box;          /* Ensures that padding and border are included in the total width and height of the element */
     display: none;
 }
 
@@ -341,9 +339,11 @@ footer {
 @media (max-width: 768px) {
     .flex-header-menu {
         flex-direction: column;
-
+        align-items: center;
     }
-   
+    .logo-container {
+        justify-content: flex-start; /* Align logo to the left */
+    }
     .logo-text {
         font-size: 18px; /* adjust as needed */
     }
@@ -351,40 +351,27 @@ footer {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 1px; /* Spacing between links */
+        gap: 0px; /* Spacing between links */
     }
     .regular-button {
         padding: 5px 10px; /* Reduce padding */
         font-size: 14px; /* Reduce font size */
-        margin: 2px 3px; /* Reduce margin */
+        margin-left: 0; /* Remove left margin */
     }
    /* Search Bar Responsiveness */
    #search-bar {
     flex-direction: row;
     align-items: center;
-    gap: 10px; /* Spacing between search elements */
+    gap: 2px;
+    width:90% /* Spacing between search elements */
 }
-#searchBar, #searchButton {
-    width: 100%;
-    margin: 5px 0;
+ #searchButton {
+    width: 60%;
+    margin: 1px 0;
 }
+.flex-container, .grid-container, footer {
+    max-width: 1200px; /* Set a maximum width */
+    margin: 0 10; /* Center the content */
+    padding: 0 5px; /* Add some padding on the left and right */
 
-   /* Footer Responsiveness */
-   .footer-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px; /* Spacing between footer sections */
 }
-}
-    .buttons-section, .social-media, .newsletter, .legal {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-    body {
-        font-size: 14px; /* Adjust as needed */
-    }
-    h1 {
-        font-size: 24px; /* Adjust as needed */
-    }
-    /* Add other elements like h2, h3, etc. if you have them */
-

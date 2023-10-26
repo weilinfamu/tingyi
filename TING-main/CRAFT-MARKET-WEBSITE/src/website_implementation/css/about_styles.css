@@ -134,9 +134,11 @@ header {
 @media only screen and (max-width: 768px) {
     header {
         flex-direction: column;
+        padding: 10px; /* Reduced padding for smaller screens */
     }
     .logo-text {
         font-size: 24px; /* adjust as needed */
+        margin-bottom: 20px;
     }
     .headline h1 {
         font-size: 2em; /* adjust as needed */
@@ -149,10 +151,20 @@ header {
 
     .menu a {
         margin: 10px 0;
+        padding: 5px 10px;
     }
     .team {
         grid-template-columns: 1fr; /* single column layout */
     }
+    img {
+        max-width: 100%;
+    }
+    
+    /* Adjust form fields for smaller screens */
+    #contact-form input[type="text"],
+    #contact-form input[type="email"],
+    #contact-form textarea {
+        width: 100%;
 }
 
 

@@ -24,17 +24,18 @@
             <nav class="links">
                 <div class="page-links">
                       <!-- Navigation Links -->
-                    <a href="wellness.html" class="regular-button">Wellness Activities</a>
+                    <a href="wellness.html" class="regular-button">Activities</a>
                     <a href="blog.html" class="regular-button">Blog</a>
                     <a href="community.html" class="regular-button">Community</a>
-                    <a href="register.html" class="regular-button">Register/Login</a>
+                    <a href="register.html" class="regular-button">Register</a>
                 </div>
             </nav>
         </header>
         <form id="search-bar" action="search endpoint" method="get"> 
             <!-- Search Bar Form -->
             <img src="media/amplifier.png" alt="Search" class="search-icon">
-            <input type="text" id="searchBar" placeholder="SEARCH" required>
+            <input type="text" id="searchBar" name="searchQuery" placeholder="SEARCH" required>
+
             <button id="searchButton" type="submit">Search</button>
         </form>
         <!-- Main Content Section -->
@@ -51,11 +52,11 @@
                     <!-- Sports Section -->
                     <div class="sports-section">
                         <span class="custom-text">Popular sports</span>
-                        <button class="return-btn" style="display: none;">Return</button>
-                        <div class="filter-buttons">
-                            <button class="filter" data-filter="yearly">YEARLY</button>
-                            <button class="filter" data-filter="monthly">MONTHLY</button>
-                            <button class="filter" data-filter="weekly">WEEKLY</button>
+                        <button class="return-btn" type="button" style="display: none;">Return</button>
+                        <button class="filter" type="button" data-filter="yearly">YEARLY</button>
+                        <button class="filter" type="button" data-filter="monthly">MONTHLY</button>
+                        <button class="filter" type="button" data-filter="weekly">WEEKLY</button>
+                        
                         </div>
                         <figure class="sport">
                             <img src="media/picture1.jpg" alt="Climbing the mountain">
@@ -90,13 +91,14 @@
                 <a href="#Blog">Blog</a>
             </div>
             <div class="social-media">
-                <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://twitter.com/home"><i class="fab fa-twitter"></i></a>
-                <a href="www.linkedin.com/in"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/home" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="www.linkedin.com/in" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+
             </div>
             <form class="newsletter" action="newsletter_endpoint" method="post">
                 <p>Subscribe to our newsletter:</p>
-                <input type="email" placeholder=" email address" required>
+                <input type="email" name="newsletterEmail" placeholder=" email address" required>
                 <button type="submit">Subscribe</button>
             </form>
              <!-- Legal Section -->
