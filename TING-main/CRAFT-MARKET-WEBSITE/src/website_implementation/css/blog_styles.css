@@ -215,74 +215,61 @@ main article {
     background-color: #0056b3;   /* Changed to blue for consistency */
 }
 
+.footer-content,
+.footer-bottom {
+    display: block; /* Ensure it's a block-level element */
+    justify-content: center;  /
+    align-items: center;
+    height: 100%; /* This will ensure the content takes up the full height of the footer */
+    padding: 20px 0;
+    background-color: #2c3e50;
+    color: #ecf0f1;
+}
 
-    footer {
-        background-color: #254C6A;    
-        color: #ffffff; 
-        padding: 30px 0;
-    }
+.footer-brand.p {
+    margin-bottom: 20px;
+    color:white;
+}
+
+.footer-links,
+.footer-section {
+    margin-bottom: 20px;
     
-    .footer-content {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-        flex-wrap: wrap;
-        color: #007BFF;
-    }
-    
-    .footer-brand {
-        width: 30%;
-        flex: 0 0 30%;
-    }
-    
-    .footer-brand h2 {
-        font-size: 28px;
-        margin-bottom: 10px;
-        color: #1976D2;    /* set the title color to blue */
-    }
-    
-    .footer-brand p {
-        margin-bottom: 20px;
-    }
-    
-    .footer-links {
-        display: flex;
-        width: 70%;
-        flex-wrap: wrap;
-    }
-    
-    .footer-section {
-        flex: 1;
-        min-width: 150px;
-    }
-    
-    .footer-section h3 {
-        font-size: 20px;
-        margin-bottom: 10px;
-        color: #1976D2; 
-    }
-    
-    .footer-section ul {
-        list-style-type: none;
-        padding: 0;
-    }
-    
-    .footer-section li {
-        margin-bottom: 8px;
-    }
-    
-    .footer-section li a {
-        color: #ffffff; 
-        text-decoration: none;
-    }
-    
-    .footer-section li a:hover {
-        text-decoration: underline; 
-    }
-    
-    .footer-bottom {
-        color: #ffffff; 
-    }
+}
+
+.footer-brand h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section li a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #34495e;
+    margin-top: 20px;
+}
+
+
+
     /* Responsive Design */
 @media screen and (max-width: 768px) {
     .fixed-nav {
@@ -301,71 +288,7 @@ main article {
         width: 100%;
     }
 
-    .footer-content {
-        flex-direction: column;
-    }
-
-    .footer-brand, .footer-links {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 20px;
-    }
+   
 }
 
 /* Enhancements for better readability and aesthetics */
-body {
-    font-size: 16px;
-}
-
-h1, h2 {
-    margin-bottom: 15px;
-}
-
-h3 {
-    margin-bottom: 10px;
-}
-
-p {
-    margin-bottom: 10px;
-}
-
-a {
-    transition: color 0.3s;
-}
-
-a:hover, a:focus {
-    color: #0056b3;
-}
-
-/* Button enhancements */
-button {
-    font-size: 16px;
-    cursor: pointer;
-}
-
-/* Additional styles for better spacing and organization */
-.fixed-nav {
-    gap: 10px;
-}
-
-
-
-.carousel {
-    gap: 20px;
-}
-
-.buttons-container {
-    gap: 20px;
-}
-
-.footer-content {
-    gap: 20px;
-}
-
-.footer-links {
-    gap: 20px;
-}
-
-.footer-section {
-    gap: 10px;
-}

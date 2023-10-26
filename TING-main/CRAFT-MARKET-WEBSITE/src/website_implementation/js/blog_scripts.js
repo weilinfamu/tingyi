@@ -1,3 +1,10 @@
+
+/*I acknowledge the use of ChatGPT (https://chat.openai.com/) to
+ ensure the completion of this task. The prompts used and the response
+  from ChatGPT are included in Appendix xx.
+  The output from these prompts was [make sure you complete this]. 
+  This usage is documented as [make sure you complete this].
+  */
 $(document).ready(function() {
     // Define the current slide index
     let currentSlide = 0;

@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Forum for Wellness Community</title>
 
-    <!-- Linking to general and community-specific stylesheets -->
-    <link rel="stylesheet" href="css/general_styles.css">
-    <link rel="stylesheet" href="css/community_styles.css">
+  
 
      <!-- Preconnecting to Google Fonts for faster loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,6 +16,13 @@
     <!-- flatpickr date picker -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <!-- Linking to general and community-specific stylesheets -->
+      <link rel="stylesheet" href="css/community_styles.css">
 </head>
 <body>
     <header>
@@ -56,52 +61,9 @@
         </div>
     </section>
 
-    <div class="filter-container">
-        <h2>Filter Program Types</h2>
-      
-        <div class="group" data-activity="football">
-            <img src="media/football.png" alt="Football Icon">
-            <p>Football (Soccer)</p>
-        </div>
-        <div class="group" data-activity="basketball">
-            <img src="media/basketball.png" alt="Basketball Icon">
-            <p>Basketball</p>
-        </div>
-        <div class="group" data-activity="tennis">
-            <img src="media/tennis.jpg" alt="Tennis Icon">
-            <p>Tennis</p>
-        </div>
-        <div class="group" data-activity="golf">
-            <img src="media/golf.png" alt="Golf Icon">
-            <p>Golf</p>
-        </div>
-        <div class="group" data-activity="cycling">
-            <img src="media/cycling.png" alt="Cycling Icon">
-            <p>Cycling</p>
-        </div>
-        <div class="group" data-activity="extremeSports">
-            <img src="media/extreme_sports.png" alt="Extreme Sports Icon">
-            <p>Extreme Sports</p>
-        </div>
-        <div class="group" data-activity="running">
-            <img src="media/running.png" alt="Running Icon">
-            <p>Running</p>
-        </div>
-        <div class="group" data-activity="yoga">
-            <img src="media/yoga.png" alt="Yoga Icon">
-            <p>Yoga</p>
-        </div>
-        <div class="group" data-activity="climbing">
-            <img src="media/climbing.png" alt="Climbing Icon">
-            <p>Climbing</p>
-        </div>
-    </div>
-    <div>
-        <section class="latest-activity" id="latestActivity"></section>
-    </div>
-    
+ 
     <div class="events-section">
-        <button id="toggleFormButton" type="button">Toggle Event Form</button>
+        <button id="toggleFormButton" type="button">Event Form</button>
            <!-- Event Submission Form  -->
         <form action="http://your_server_address/api/community_events/" method="post" enctype="multipart/form-data" id="eventForm">
         <div class="form-group">
@@ -161,10 +123,15 @@
         <div id="eventsContainer"></div>
     </div>
     <!-- Image Container with a Community Photo -->
-    <div class="image-container">
-          <!-- Community Photo sourced from pexels.com -->
-        <img src="media/picture6.jpg" alt="Community Photo" class="positioned-image" aria-label="Community Photo">
+    <div class="community-section">
+        <div class="community-image">
+            <img src="media/picture6.jpg" alt="Community Photo" class="positioned-image" aria-label="Community Photo">
+        </div>
+        <div class="community-text">
+            <p>Our community thrives on unity and harmony, embracing individuals of all races and backgrounds.</p>
+        </div>
     </div>
+    
 </main>
 <!-- Footer Section -->
 <footer>
@@ -173,17 +140,22 @@
             <h2>Community Forum</h2>
             <p>Join our growing community of X members and Y active discussions. Share knowledge, seek advice, and interact with like-minded individuals.</p>
             <!-- Social media icons here, you can replace them with your own links -->
-            <a href="https://www.facebook.com/" aria-label="Visit Facebook page"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://twitter.com/home" aria-label="Visit Twitter page"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/in?_l=en_US" aria-label="Visit LinkedIn page"><i class="fab fa-linkedin-in"></i></a>
-
+            <a href="https://www.facebook.com/" aria-label="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com/home" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/in?_l=en_US" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
         </div>
         <div class="footer-links">
             <div class="footer-section">
                 <h3>Community</h3>
                 <ul>
                     <li><a href="about.html">About Our Community</a></li>
-                    <li><a href="#">Join Discussions</a></li>
+                    <li><a href="blog.html">Join blog Discussions</a></li>
                     <li><a href="#">Events</a></li>
                     <li><a href="contactus.html">Contact Us</a></li>
                 </ul>
@@ -208,6 +180,7 @@
         </div>
     </div>
     <div class="footer-bottom">
+        <!--got inspiration from https://www.activeandhealthy.nsw.gov.au -->
         <p>&copy; 2023 Community Forum — Uniting for Wellness. All rights reserved.</p>
     </div>
 </footer>

@@ -1,3 +1,5 @@
+let events_list;
+
 document.addEventListener("DOMContentLoaded", function() {
     // Access the form element to handle event submissions
     const eventForm = document.getElementById('eventForm');
@@ -9,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
             eventForm.classList.toggle('visible');
         });
     }
+});
 
         // Container where the fetched events will be displayed
     const eventsContainer = document.getElementById('eventsContainer');
@@ -71,68 +74,100 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
      // Fetch and display events posted for this website
-    function getPostedEvents() {
-        fetch(urlWithParams, requestOptionsGET)
-            .then(response => {
-                
-                if (!response.ok) {
-                    // Handle non-200 responses
-                    throw new Error(`Network response was not ok. Status: ${response.status} ${response.statusText}`);
-                }
-                return response.json();
-            })
-            .then(events => {
-                console.log('Received events:', events);
-                
-                 // Process and display the fetched events
-                if (!events || !events.length) {
-                    alert("No events found.");
-                    return;
-                }
-                function displayEventDetails(event) {
-                    const latestActivity = document.getElementById('latestActivity');
-                    latestActivity.innerHTML = `
-                        <h2>${event.name}</h2>
-                        <img src="${event.photo}" alt="${event.name}">
-                        <p>${event.description}</p>
-                        <p><strong>Location:</strong> ${event.location}</p>
-                        <p><strong>Organiser:</strong> ${event.organiser}</p>
-                        <p><strong>Event Type:</strong> ${event.event_type}</p>
-                        <p><strong>Date & Time:</strong> ${new Date(event.date_time).toLocaleString()}</p>
-                    `;
-                }
-                  // Clear the events container and populate it with the fetched events
-                if (eventsContainer) {
-                    while (eventsContainer.firstChild) {
-                        eventsContainer.removeChild(eventsContainer.firstChild);
-                    }
+function getPostedEvents() {
+    // Create two rows
+    
+    fetch(urlWithParams, requestOptionsGET)
+    .then(response => {
+    
+        if (!response.ok) {
+            // Handle non-200 responses
+            throw new Error(`Network response was not ok. Status: ${response.status} ${response.statusText}`);
+        }
+        return response.json();
+    })
+    .then(events => {
+        console.log('Received events:', events);
+    
+        // Process and display the fetched events
+        if (!events || !events.length) {
+            alert("No events found.");
+            return;
+        } else {
+            events_list = events;
+            renderEvents(events_list);
+        }
+    })
+    .catch(error => {
+        // Handle any errors during the fetch or processing of events
+        console.error("Error processing events:", error);
+        alert(`There was a problem loading events: ${error.message}. Please refresh the page to try again.`);
+    });
+};
 
-                    events.forEach(event => {
-                        const eventTemplate = `
-                            <article class="col-12 col-md-6 col-lg-4">
-                                <div class="card" role="group" aria-labelledby="cards${event.id}-title" aria-describedby="cards${event.id}-desc">
-                                    <h2 class="card-header p-2" id="cards${event.id}-title">${event.name}</h2>
-                                    <img class="card-banner-image" src="${event.photo}" alt="${event.name}">
-                                    <p class="card-body-text p-2">${event.description}</p>
-                                    <p class="card-body-text px-2"><strong>Location:</strong> ${event.location}</p>
-                                    <p class="card-body-text px-2"><strong>Organiser:</strong> ${event.organiser}</p>
-                                    <p class="card-body-text px-2"><strong>Event Type:</strong> ${event.event_type}</p>
-                                    <p class="card-body-text px-2"><strong>Date & Time:</strong> ${new Date(event.date_time).toLocaleString()}</p>
-                                </div>
-                            </article>
-                        `;
-                    
-                        eventsContainer.innerHTML += eventTemplate;
-                    });
-                }
-            })
-                
-            .catch(error => {
-                 // Handle any errors during the fetch or processing of events
-            console.error("Error processing events:", error);
-            alert(`There was a problem loading events: ${error.message}. Please refresh the page to try again.`);
-        });
+    // function displayEventDetails(event) {
+    //     const latestActivity = document.getElementById('latestActivity');
+    //     latestActivity.innerHTML = `
+    //         <h2>${event.name}</h2>
+    //         <img src="${event.photo}" alt="${event.name}">
+    //         <p>${event.description}</p>
+    //         <p><strong>Location:</strong> ${event.location}</p>
+    //         <p><strong>Organiser:</strong> ${event.organiser}</p>
+    //         <p><strong>Event Type:</strong> ${event.event_type}</p>
+    //         <p><strong>Date & Time:</strong> ${new Date(event.date_time).toLocaleString()}</p>
+    //     `;
+    // }
+
+    // Clear the events container and populate it with the fetched events
+
+function renderEvents(events){
+
+    let row1 = document.createElement('div');
+    row1.className = 'row';
+
+    let row2 = document.createElement('div');
+    row2.className = 'row';
+    
+    if (eventsContainer) {
+        while (eventsContainer.firstChild) {
+            eventsContainer.removeChild(eventsContainer.firstChild);
+        }
+    };
+
+    events.forEach((event, index) => {
+        const eventTemplate = `
+            <div class="col-12 col-md-6 col-lg-4">
+                <article class="card" role="group" aria-labelledby="cards${event.id}-title" aria-describedby="cards${event.id}-desc">
+                    <h2 class="card-header p-2" id="cards${event.id}-title">${event.name}</h2>
+                    <img class="card-banner-image" src="${event.photo}" alt="${event.name}">
+                    <p class="card-body-text p-2">${event.description}</p>
+                    <p class="card-body-text px-2"><strong>Location:</strong> ${event.location}</p>
+                    <p class="card-body-text px-2"><strong>Organiser:</strong> ${event.organiser}</p>
+                    <p class="card-body-text px-2"><strong>Event Type:</strong> ${event.event_type}</p>
+                    <p class="card-body-text px-2"><strong>Date & Time:</strong> ${new Date(event.date_time).toLocaleString()}</p>
+                </article>
+            </div>
+        `;
+        if (index >= 6) return;  // Stop processing after the sixth event
+        // Append the first three cards to row1 and the next three cards to row2
+        if (index < 3) {
+            row1.innerHTML += eventTemplate;
+        } else {
+            row2.innerHTML += eventTemplate;
+        }
+    })
+        // Append the rows to the container
+    eventsContainer.appendChild(row1);
+    eventsContainer.appendChild(row2);
 }
-    // Fetch and display events posted for this website
-    getPostedEvents();
-});
+    
+
+
+    // Display the details of the first event in the latestActivity section
+    // displayEventDetails(events[0]);
+
+// run on page load
+getPostedEvents();
+
+
+    
